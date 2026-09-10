@@ -12,7 +12,14 @@ import { Button } from "@/ui/Button";
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, getSubtotal } = useCartStore();
-  const subtotal = getSubtotal();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const subtotal = mounted ? getSubtotal() : 0;
+  const currentItems = mounted ? items : [];
   const freeShippingThreshold = 2500;
   const progressPercent = Math.min(100, (subtotal / freeShippingThreshold) * 100);
 
@@ -25,7 +32,7 @@ export default function CartPage() {
           description="Review allocated hardware units prior to white-glove logistics scheduling and production reservation."
         />
 
-        {items.length === 0 ? (
+        {currentItems.length === 0 ? (
           <div className="py-24 text-center border border-ctm-border bg-ctm-surface max-w-2xl mx-auto p-8">
             <h2 className="text-xl font-display font-bold uppercase text-white mb-2">
               Your vault is empty
@@ -41,7 +48,7 @@ export default function CartPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Items Column */}
             <div className="lg:col-span-8 bg-ctm-surface border border-ctm-border p-6 sm:p-8 divide-y divide-ctm-borderSubtle">
-              {items.map((item) => (
+              {currentItems.map((item) => (
                 <div key={item.id} className="py-6 first:pt-0 last:pb-0 flex flex-col sm:flex-row gap-6">
                   {/* Thumbnail */}
                   <div className="relative w-full sm:w-32 h-36 bg-black border border-ctm-border flex items-center justify-center p-2 shrink-0">

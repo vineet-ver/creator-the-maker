@@ -14,7 +14,14 @@ import { Button } from "@/ui/Button";
 export default function CheckoutPage() {
   const router = useRouter();
   const { items, getSubtotal, clearCart } = useCartStore();
-  const subtotal = getSubtotal();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const subtotal = mounted ? getSubtotal() : 0;
+  const currentItems = mounted ? items : [];
 
   const [paymentMethod, setPaymentMethod] = useState<"card" | "wire" | "whatsapp">("card");
   const [formData, setFormData] = useState({
@@ -78,7 +85,7 @@ export default function CheckoutPage() {
     }, 1200);
   };
 
-  if (items.length === 0 && !isProcessing) {
+  if (mounted && currentItems.length === 0 && !isProcessing) {
     return (
       <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
         <Container size="narrow">

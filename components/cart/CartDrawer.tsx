@@ -12,8 +12,13 @@ export function CartDrawer() {
   const { items, isOpen, closeCart, removeItem, updateQuantity, getSubtotal } =
     useCartStore();
   const subtotal = getSubtotal();
+  const [mounted, setMounted] = useState(false);
   const freeShippingThreshold = 2500;
   const progressPercent = Math.min(100, (subtotal / freeShippingThreshold) * 100);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -26,7 +31,7 @@ export function CartDrawer() {
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!mounted || !isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[120] overflow-hidden">

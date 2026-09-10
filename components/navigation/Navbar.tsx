@@ -14,7 +14,13 @@ export function Navbar() {
   const pathname = usePathname();
 
   const { openCart, getItemCount } = useCartStore();
-  const itemCount = getItemCount();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const itemCount = mounted ? getItemCount() : 0;
 
   useEffect(() => {
     const handleScroll = () => {
