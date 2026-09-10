@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="trunkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080808" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+    <linearGradient id="trunkBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A1A1A" />
+      <stop offset="50%" stop-color="#262626" />
+      <stop offset="100%" stop-color="#161616" />
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#AA820A" />
+      <stop offset="100%" stop-color="#6E5204" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#trunkBg)" />
+  <ellipse cx="400" cy="880" rx="270" ry="22" fill="#000000" opacity="0.95" />
+
+  <!-- Heavy Duty Steamer Trunk Body -->
+  <rect x="180" y="160" width="440" height="680" rx="6" fill="url(#trunkBody)" stroke="#383838" stroke-width="2" />
+
+  <!-- Internal Open Trunk Division Line -->
+  <line x1="400" y1="160" x2="400" y2="840" stroke="#0E0E0E" stroke-width="4" />
+
+  <!-- Left Wing: 4 Pull-out Micro-suede Shelves -->
+  <g fill="#101010" stroke="#262626" stroke-width="1">
+    <rect x="195" y="180" width="190" height="145" />
+    <rect x="195" y="340" width="190" height="145" />
+    <rect x="195" y="500" width="190" height="145" />
+    <rect x="195" y="660" width="190" height="145" />
+  </g>
+
+  <!-- Right Wing: 4 Pull-out Micro-suede Shelves -->
+  <g fill="#101010" stroke="#262626" stroke-width="1">
+    <rect x="415" y="180" width="190" height="145" />
+    <rect x="415" y="340" width="190" height="145" />
+    <rect x="415" y="500" width="190" height="145" />
+    <rect x="415" y="660" width="190" height="145" />
+  </g>
+
+  <!-- LED illumination top bars -->
+  <g stroke="#FFFFFF" stroke-width="1.5" opacity="0.8">
+    <line x1="205" y1="190" x2="375" y2="190" />
+    <line x1="205" y1="350" x2="375" y2="350" />
+    <line x1="205" y1="510" x2="375" y2="510" />
+    <line x1="205" y1="670" x2="375" y2="670" />
+    <line x1="425" y1="190" x2="595" y2="190" />
+    <line x1="425" y1="350" x2="595" y2="350" />
+    <line x1="425" y1="510" x2="595" y2="510" />
+    <line x1="425" y1="670" x2="595" y2="670" />
+  </g>
+
+  <!-- Solid Brass / Heavy Armor Corner Brackets -->
+  <polygon points="180,160 220,160 180,200" fill="url(#brassGrad)" />
+  <polygon points="620,160 580,160 620,200" fill="url(#brassGrad)" />
+  <polygon points="180,840 220,840 180,800" fill="url(#brassGrad)" />
+  <polygon points="620,840 580,840 620,800" fill="url(#brassGrad)" />
+  
+  <!-- Rivets along outer border -->
+  <g fill="#888888">
+    <circle cx="188" cy="240" r="3" />
+    <circle cx="188" cy="340" r="3" />
+    <circle cx="188" cy="440" r="3" />
+    <circle cx="188" cy="540" r="3" />
+    <circle cx="188" cy="640" r="3" />
+    <circle cx="188" cy="740" r="3" />
+    <circle cx="612" cy="240" r="3" />
+    <circle cx="612" cy="340" r="3" />
+    <circle cx="612" cy="440" r="3" />
+    <circle cx="612" cy="540" r="3" />
+    <circle cx="612" cy="640" r="3" />
+    <circle cx="612" cy="740" r="3" />
+  </g>
+
+  <!-- Center Double Latches -->
+  <rect x="388" y="320" width="24" height="40" fill="url(#brassGrad)" stroke="#4A3B08" rx="2" />
+  <rect x="388" y="640" width="24" height="40" fill="url(#brassGrad)" stroke="#4A3B08" rx="2" />
+
+  <!-- Red Heritage Pull-Tab -->
+  <rect x="396" y="470" width="8" height="50" fill="#E11D48" rx="2" />
+
+  <!-- Typography -->
+  <text x="400" y="920" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" letter-spacing="4" text-anchor="middle">THE SNEAKER TRUNK</text>
+  <text x="400" y="945" font-family="'Inter', sans-serif" font-size="11" fill="#7E7E86" letter-spacing="2" text-anchor="middle">HERITAGE STEAMER // 16 PAIR SLIDING VAULTS</text>
+</svg>

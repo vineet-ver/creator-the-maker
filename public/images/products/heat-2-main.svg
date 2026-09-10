@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="50%" stop-color="#121212" />
+      <stop offset="100%" stop-color="#070707" />
+    </linearGradient>
+    <linearGradient id="metalFrame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D2D2D" />
+      <stop offset="50%" stop-color="#1A1A1A" />
+      <stop offset="100%" stop-color="#121212" />
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.02" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="ledGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF5EA" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#FFF5EA" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="bloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#222222" stroke-width="0.5" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Background Environment -->
+  <rect width="800" height="1000" fill="url(#bgGrad)" />
+  <rect width="800" height="1000" fill="url(#gridPattern)" />
+
+  <!-- Studio Floor Shadow -->
+  <ellipse cx="400" cy="880" rx="260" ry="24" fill="#000000" opacity="0.8" />
+  <ellipse cx="400" cy="880" rx="190" ry="12" fill="#000000" opacity="0.95" />
+
+  <!-- Plinth / Base Pedestal -->
+  <rect x="230" y="840" width="340" height="18" fill="#141414" stroke="#2E2E2E" stroke-width="1" />
+  <line x1="230" y1="844" x2="570" y2="844" stroke="#E11D48" stroke-width="1.5" />
+
+  <!-- Main Monolith Outer Chassis -->
+  <rect x="200" y="140" width="400" height="700" rx="2" fill="url(#metalFrame)" stroke="#333333" stroke-width="1.5" />
+
+  <!-- Internal Display Chamber (Dual Tier) -->
+  <rect x="218" y="158" width="364" height="664" fill="#070707" stroke="#1F1F1F" stroke-width="1" />
+
+  <!-- Chamber Divider Shelf (Milled Aluminum) -->
+  <rect x="218" y="480" width="364" height="12" fill="#222222" stroke="#383838" stroke-width="0.75" />
+  <rect x="220" y="482" width="360" height="2" fill="#E11D48" opacity="0.8" />
+
+  <!-- Top Tier Lighting Array -->
+  <rect x="235" y="166" width="330" height="6" rx="2" fill="url(#ledGlow)" filter="url(#bloom)" />
+  <rect x="230" y="164" width="340" height="10" fill="#FFFFFF" opacity="0.15" />
+  <!-- Top Chamber Illumination Cone -->
+  <polygon points="235,172 565,172 576,478 224,478" fill="url(#glassReflection)" opacity="0.4" />
+
+  <!-- Upper Tier Sneaker Silhouette Mockup -->
+  <g transform="translate(260, 310)" stroke="#4A4A4A" stroke-width="1.5" fill="none">
+    <!-- Sole & Outsole -->
+    <path d="M 30,120 Q 80,128 140,124 Q 210,120 240,105 Q 248,85 240,75 L 210,75 Q 180,60 140,50 L 100,50 Q 80,45 60,60 L 30,85 Z" fill="#141414" stroke="#5E5E5E" />
+    <!-- Collar & Tongue -->
+    <path d="M 60,60 L 50,-10 Q 55,-25 80,-25 L 120,-15 Q 125,5 110,40" stroke="#777777" />
+    <line x1="85" y1="5" x2="135" y2="25" stroke="#E11D48" stroke-width="2" />
+    <path d="M 30,120 L 240,120" stroke="#E11D48" stroke-width="1" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Lower Tier Lighting Array -->
+  <rect x="235" y="496" width="330" height="6" rx="2" fill="url(#ledGlow)" filter="url(#bloom)" />
+  <!-- Lower Chamber Illumination Cone -->
+  <polygon points="235,502 565,502 576,820 224,820" fill="url(#glassReflection)" opacity="0.4" />
+
+  <!-- Lower Tier Sneaker Silhouette Mockup -->
+  <g transform="translate(260, 650)" stroke="#4A4A4A" stroke-width="1.5" fill="none">
+    <path d="M 30,120 Q 80,128 140,124 Q 210,120 240,105 Q 248,85 240,75 L 210,75 Q 180,60 140,50 L 100,50 Q 80,45 60,60 L 30,85 Z" fill="#141414" stroke="#5E5E5E" />
+    <path d="M 60,60 L 50,-10 Q 55,-25 80,-25 L 120,-15 Q 125,5 110,40" stroke="#777777" />
+    <line x1="85" y1="5" x2="135" y2="25" stroke="#FFFFFF" stroke-width="1.5" />
+    <circle cx="95" cy="85" r="16" stroke="#E11D48" stroke-width="1" />
+  </g>
+
+  <!-- Low-Iron Glass Door Overlay with Diagonal Glare -->
+  <rect x="208" y="148" width="384" height="684" fill="url(#glassReflection)" stroke="#444444" stroke-width="0.75" />
+  <polygon points="215,155 380,155 215,750" fill="#FFFFFF" opacity="0.03" />
+
+  <!-- Precision Hardware: Concealed Hinges & Door Grip -->
+  <rect x="200" y="240" width="5" height="45" fill="#555555" />
+  <rect x="200" y="680" width="5" height="45" fill="#555555" />
+  <!-- Flush Anodized Handle Recess -->
+  <rect x="582" y="460" width="4" height="60" rx="1" fill="#E11D48" />
+
+  <!-- Architectural Badging & Typography -->
+  <text x="400" y="115" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#E11D48" letter-spacing="4" text-anchor="middle">CREATOR THE MAKER // ARCHITECTURAL ARCHIVE</text>
+  <text x="400" y="930" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" letter-spacing="6" text-anchor="middle">HEAT 2.0</text>
+  <text x="400" y="955" font-family="'Inter', sans-serif" font-size="11" fill="#7E7E86" letter-spacing="2" text-anchor="middle">DUAL-STAGE ANODIZED GRAIL CHAMBER</text>
+  <line x1="340" y1="970" x2="460" y2="970" stroke="#2B2B2B" stroke-width="1" />
+</svg>

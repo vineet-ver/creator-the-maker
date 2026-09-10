@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 48" width="100%" height="100%">
+  <!-- Creator The Maker Architectural Wordmark -->
+  <text x="0" y="32" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="3">CREATOR</text>
+  <text x="135" y="32" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="400" fill="#737373" letter-spacing="2">THE</text>
+  <text x="178" y="32" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="3">MAKER</text>
+  <!-- Red Precision Accent Tag -->
+  <rect x="290" y="16" width="6" height="18" fill="#E11D48" />
+  <circle cx="310" cy="25" r="3" fill="#E11D48" />
+</svg>

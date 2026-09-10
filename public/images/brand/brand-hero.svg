@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505" />
+      <stop offset="50%" stop-color="#0E0E0E" />
+      <stop offset="100%" stop-color="#020202" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#heroDark)" />
+  <rect width="1600" height="900" fill="url(#centerGlow)" />
+
+  <!-- Architectural Background Grid -->
+  <g stroke="#1A1A1A" stroke-width="1" opacity="0.6">
+    <line x1="200" y1="0" x2="200" y2="900" />
+    <line x1="500" y1="0" x2="500" y2="900" />
+    <line x1="800" y1="0" x2="800" y2="900" />
+    <line x1="1100" y1="0" x2="1100" y2="900" />
+    <line x1="1400" y1="0" x2="1400" y2="900" />
+    <line x1="0" y1="200" x2="1600" y2="200" />
+    <line x1="0" y1="500" x2="1600" y2="500" />
+    <line x1="0" y1="750" x2="1600" y2="750" />
+  </g>
+
+  <!-- Dramatic Centerpiece Monolith Silhouette (HEAT 2.0 Trio Installation) -->
+  <!-- Left Unit -->
+  <rect x="520" y="240" width="160" height="460" fill="#121212" stroke="#2B2B2B" stroke-width="1.5" />
+  <line x1="535" y1="255" x2="665" y2="255" stroke="#FFFFFF" stroke-width="2.5" opacity="0.9" />
+  <line x1="535" y1="480" x2="665" y2="480" stroke="#FFFFFF" stroke-width="2.5" opacity="0.9" />
+  <!-- Center Main Unit Elevated -->
+  <rect x="720" y="200" width="180" height="500" fill="#161616" stroke="#3D3D3D" stroke-width="2" />
+  <line x1="735" y1="215" x2="885" y2="215" stroke="#FFFFFF" stroke-width="3" opacity="1" />
+  <line x1="735" y1="450" x2="885" y2="450" stroke="#FFFFFF" stroke-width="3" opacity="1" />
+  <!-- Right Unit -->
+  <rect x="940" y="240" width="160" height="460" fill="#121212" stroke="#2B2B2B" stroke-width="1.5" />
+  <line x1="955" y1="255" x2="1085" y2="255" stroke="#FFFFFF" stroke-width="2.5" opacity="0.9" />
+  <line x1="955" y1="480" x2="1085" y2="480" stroke="#FFFFFF" stroke-width="2.5" opacity="0.9" />
+
+  <!-- Continuous Red Accent Datum Line across units -->
+  <line x1="480" y1="700" x2="1140" y2="700" stroke="#E11D48" stroke-width="2" />
+
+  <!-- Shadow below monoliths -->
+  <ellipse cx="810" cy="715" rx="360" ry="25" fill="#000000" opacity="0.95" />
+
+  <!-- Subtle Museum Flood Light Ray -->
+  <polygon points="810,0 600,700 1020,700" fill="#FFFFFF" opacity="0.02" />
+</svg>

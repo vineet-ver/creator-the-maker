@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bespokeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505" />
+      <stop offset="50%" stop-color="#0E0E0E" />
+      <stop offset="100%" stop-color="#040404" />
+    </linearGradient>
+    <pattern id="archGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#222222" stroke-width="0.75" opacity="0.4" />
+      <circle cx="60" cy="60" r="1.5" fill="#E11D48" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bespokeBg)" />
+  <rect width="1200" height="800" fill="url(#archGrid)" />
+
+  <!-- Architectural Room Wireframe Perspective -->
+  <g stroke="#333333" stroke-width="1.5" fill="none">
+    <!-- Ceiling Grid Lines -->
+    <line x1="150" y1="100" x2="1050" y2="100" />
+    <line x1="250" y1="180" x2="950" y2="180" />
+    <!-- Vanishing Perspective Lines -->
+    <line x1="150" y1="100" x2="250" y2="180" stroke="#444444" />
+    <line x1="1050" y1="100" x2="950" y2="180" stroke="#444444" />
+    <line x1="150" y1="700" x2="250" y2="620" stroke="#444444" />
+    <line x1="1050" y1="700" x2="950" y2="620" stroke="#444444" />
+    <!-- Rear Wall Boundary -->
+    <rect x="250" y="180" width="700" height="440" stroke="#4F4F4F" stroke-width="2" />
+  </g>
+
+  <!-- Left Wall Floating Glass Cases -->
+  <g fill="#111111" stroke="#333333">
+    <polygon points="170,220 230,240 230,580 170,620" />
+    <polygon points="170,260 230,280 230,284 170,264" fill="#E11D48" />
+    <polygon points="170,360 230,380 230,384 170,364" fill="#E11D48" />
+    <polygon points="170,460 230,480 230,484 170,464" fill="#E11D48" />
+  </g>
+
+  <!-- Rear Wall: Continuous Monolith Grid -->
+  <g fill="#141414" stroke="#2B2B2B" stroke-width="1">
+    <rect x="300" y="220" width="120" height="170" />
+    <rect x="450" y="220" width="120" height="170" />
+    <rect x="600" y="220" width="120" height="170" />
+    <rect x="750" y="220" width="120" height="170" />
+
+    <rect x="300" y="420" width="120" height="170" />
+    <rect x="450" y="420" width="120" height="170" />
+    <rect x="600" y="420" width="120" height="170" />
+    <rect x="750" y="420" width="120" height="170" />
+  </g>
+
+  <!-- Ambient Light Washes in Display Bays -->
+  <g stroke="#FFFFFF" stroke-width="2" opacity="0.9">
+    <line x1="310" y1="230" x2="410" y2="230" />
+    <line x1="460" y1="230" x2="560" y2="230" />
+    <line x1="610" y1="230" x2="710" y2="230" />
+    <line x1="760" y1="230" x2="860" y2="230" />
+    <line x1="310" y1="430" x2="410" y2="430" />
+    <line x1="460" y1="430" x2="560" y2="430" />
+    <line x1="610" y1="430" x2="710" y2="430" />
+    <line x1="760" y1="430" x2="860" y2="430" />
+  </g>
+
+  <!-- Center Presentation Island Plinth -->
+  <polygon points="460,540 710,540 760,610 410,610" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5" />
+  <polygon points="410,610 760,610 760,660 410,660" fill="#121212" stroke="#333333" />
+  <line x1="410" y1="610" x2="760" y2="610" stroke="#E11D48" stroke-width="2" />
+
+  <!-- Architectural CAD Markings -->
+  <g stroke="#E11D48" stroke-width="1" opacity="0.7">
+    <line x1="280" y1="200" x2="280" y2="610" />
+    <line x1="275" y1="200" x2="285" y2="200" />
+    <line x1="275" y1="610" x2="285" y2="610" />
+  </g>
+  <text x="270" y="410" font-family="'Space Grotesk', monospace" font-size="10" fill="#E11D48" text-anchor="middle" transform="rotate(-90 270 410)">3600 MM CEILING HEIGHT</text>
+
+  <text x="600" y="80" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#E11D48" letter-spacing="4" text-anchor="middle">BESPOKE ARCHITECTURAL DIVISION</text>
+  <text x="600" y="725" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="4" text-anchor="middle">CUSTOM SNEAKER ROOM COMMISSIONS</text>
+  <text x="600" y="750" font-family="'Inter', sans-serif" font-size="12" fill="#7E7E86" letter-spacing="2" text-anchor="middle">TAILORED DIMENSIONS // MOTORIZED VITRINES // CLIMATE BUFFERED</text>
+</svg>

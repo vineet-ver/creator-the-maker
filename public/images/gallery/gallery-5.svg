@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080808" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="650" fill="url(#g5)" />
+  <!-- Kyoto Minimalist Atelier -->
+  <rect x="150" y="240" width="600" height="140" fill="#141414" stroke="#333333" stroke-width="1.5" />
+  <line x1="150" y1="240" x2="750" y2="240" stroke="#FFAE52" stroke-width="2" />
+  <g fill="#0B0B0B" stroke="#262626">
+    <rect x="180" y="260" width="110" height="100" />
+    <rect x="315" y="260" width="110" height="100" />
+    <rect x="450" y="260" width="110" height="100" />
+    <rect x="585" y="260" width="110" height="100" />
+  </g>
+  <line x1="180" y1="355" x2="695" y2="355" stroke="#E11D48" stroke-width="1" />
+  <text x="450" y="520" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="3" text-anchor="middle">MINIMALIST ATELIER // KYOTO</text>
+</svg>

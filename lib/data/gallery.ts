@@ -1,0 +1,148 @@
+import { GalleryItem } from "@/lib/types";
+
+export const GALLERY_PROJECTS: GalleryItem[] = [
+  {
+    id: "gal-01",
+    title: "The Tribeca Vault",
+    slug: "the-tribeca-vault",
+    category: "Sneaker Rooms",
+    location: "Tribeca, New York City",
+    collectionSize: "140 Pairs",
+    solution: "Full-room architectural installation with climate control and motorized floor-to-ceiling glass vaults.",
+    year: "2026",
+    image: "/images/gallery/gallery-1.svg",
+    galleryImages: [
+      "/images/gallery/gallery-1.svg",
+      "/images/products/heat-2-lifestyle.svg",
+      "/images/products/tower-trunk-main.svg",
+    ],
+    description:
+      "A commissioned walk-in sneaker sanctuary inside a private penthouse loft. Features floor-to-ceiling anodized aluminum vertical towers, museum low-iron glass partitions, and circadian color-temperature lighting synchronized to daylight cycles.",
+    specs: {
+      capacity: "140 Pairs",
+      finish: "Anodized Matte Obsidian",
+      lighting: "Circadian Tunable 2700K - 5000K",
+      installationTime: "6 Weeks",
+    },
+  },
+  {
+    id: "gal-02",
+    title: "Monolith Residence",
+    slug: "monolith-residence",
+    category: "Wall Storage",
+    location: "Zurich, Switzerland",
+    collectionSize: "48 Pairs",
+    solution: "Continuous flush-wall HEAT 2.0 array integrated into structural concrete architecture.",
+    year: "2025",
+    image: "/images/gallery/gallery-2.svg",
+    galleryImages: [
+      "/images/gallery/gallery-2.svg",
+      "/images/products/heat-2-main.svg",
+      "/images/products/heat-2-side.svg",
+    ],
+    description:
+      "Integrated into a brutalist concrete villa. Eight HEAT 2.0 dual-column modules recessed flush into the wall surface with magnetic perimeter seals and concealed wire-runs.",
+    specs: {
+      capacity: "48 Pairs",
+      finish: "Raw Brushed Titanium",
+      lighting: "4500K Studio Museum",
+      installationTime: "2 Weeks",
+    },
+  },
+  {
+    id: "gal-03",
+    title: "Mayfair Private Lounge",
+    slug: "mayfair-private-lounge",
+    category: "Trunks",
+    location: "Mayfair, London",
+    collectionSize: "32 Pairs",
+    solution: "Dual bespoke heritage Sneaker Trunks flanking custom executive seating credenza.",
+    year: "2026",
+    image: "/images/gallery/gallery-3.svg",
+    galleryImages: [
+      "/images/gallery/gallery-3.svg",
+      "/images/products/sneaker-trunk-main.svg",
+      "/images/products/long-trunk-main.svg",
+    ],
+    description:
+      "Two matching bespoke travel trunks rendered in deep textured coal composite with hand-polished brass hardware and Italian alcantara interiors.",
+    specs: {
+      capacity: "32 Pairs",
+      finish: "Textured Coal & Solid Brass",
+      lighting: "Cordless Li-Ion Warm Glow 3000K",
+      installationTime: "Immediate Commission",
+    },
+  },
+  {
+    id: "gal-04",
+    title: "Beverly Hills Horizon Pavilion",
+    slug: "beverly-hills-horizon-pavilion",
+    category: "Custom Projects",
+    location: "Beverly Hills, California",
+    collectionSize: "80 Pairs",
+    solution: "Architectural freestanding partition dividing master dressing suite and private gallery.",
+    year: "2025",
+    image: "/images/gallery/gallery-4.svg",
+    galleryImages: [
+      "/images/gallery/gallery-4.svg",
+      "/images/products/tower-trunk-main.svg",
+      "/images/gallery/bespoke-hero.svg",
+    ],
+    description:
+      "A dual-sided freestanding architectural divider featuring 20 Tower Trunk modular segments, structural steel framework, and smart automation integrated with Crestron home controls.",
+    specs: {
+      capacity: "80 Pairs",
+      finish: "Satin Gunmetal & Smoked Glass",
+      lighting: "Crestron Smart Dimmable 4000K",
+      installationTime: "4 Weeks",
+    },
+  },
+  {
+    id: "gal-05",
+    title: "Kyoto Minimalist Atelier",
+    slug: "kyoto-minimalist-atelier",
+    category: "Installations",
+    location: "Kyoto, Japan",
+    collectionSize: "24 Pairs",
+    solution: "Low-profile Long Trunk paired with minimalist floating wall showcases.",
+    year: "2026",
+    image: "/images/gallery/gallery-5.svg",
+    galleryImages: [
+      "/images/gallery/gallery-5.svg",
+      "/images/products/long-trunk-main.svg",
+      "/images/products/heat-main.svg",
+    ],
+    description:
+      "Harmonizing modern German metalcraft with Japanese spatial minimalism. Features blackened aluminum credenzas and custom cedar-lined humidity buffer cassettes.",
+    specs: {
+      capacity: "24 Pairs",
+      finish: "Black Anodized Aluminum & Hinoki Accents",
+      lighting: "Under-Shelf 2700K Glow",
+      installationTime: "10 Days",
+    },
+  },
+  {
+    id: "gal-06",
+    title: "Dubai Marina Tower",
+    slug: "dubai-marina-tower",
+    category: "Sneaker Rooms",
+    location: "Dubai Marina, UAE",
+    collectionSize: "200+ Pairs",
+    solution: "Full duplex private gallery spanning 45 square meters with biometric security access.",
+    year: "2026",
+    image: "/images/gallery/gallery-6.svg",
+    galleryImages: [
+      "/images/gallery/gallery-6.svg",
+      "/images/gallery/bespoke-hero.svg",
+      "/images/products/tower-trunk-main.svg",
+    ],
+    description:
+      "A flagship residential commission housing some of the world's rarest player exclusives and prototypes. Features argon gas-sealed chambers, retinal/fingerprint lock assemblies, and custom anti-reflective museum vitrines.",
+    specs: {
+      capacity: "210 Pairs",
+      finish: "Architectural Obsidian & Rose Gold Accents",
+      lighting: "Multi-Zone App Controlled RGBW",
+      installationTime: "8 Weeks",
+    },
+  },
+];

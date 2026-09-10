@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111" />
+      <stop offset="100%" stop-color="#080808" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="650" fill="url(#g3)" />
+  <!-- Mayfair Luxury Suite with Heritage Trunks -->
+  <rect x="180" y="160" width="220" height="340" rx="4" fill="#1C1C1C" stroke="#B8860B" stroke-width="2" />
+  <rect x="500" y="160" width="220" height="340" rx="4" fill="#1C1C1C" stroke="#B8860B" stroke-width="2" />
+  <rect x="180" y="160" width="220" height="15" fill="#B8860B" />
+  <rect x="500" y="160" width="220" height="15" fill="#B8860B" />
+  <!-- Center credenza -->
+  <rect x="360" y="380" width="180" height="120" fill="#141414" stroke="#333333" />
+  <line x1="180" y1="500" x2="720" y2="500" stroke="#E11D48" stroke-width="2" />
+  <text x="450" y="580" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="3" text-anchor="middle">MAYFAIR PRIVATE LOUNGE // LONDON</text>
+</svg>

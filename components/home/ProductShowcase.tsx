@@ -1,0 +1,200 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { ArrowRight, Shield, Zap, Sparkles } from "lucide-react";
+import { PRODUCTS } from "@/lib/data/products";
+import { Button } from "@/ui/Button";
+
+export function ProductShowcase() {
+  const heat2 = PRODUCTS.find((p) => p.slug === "heat-2-0") || PRODUCTS[0];
+  const sneakerTrunk = PRODUCTS.find((p) => p.slug === "sneaker-trunk") || PRODUCTS[2];
+
+  return (
+    <section className="bg-black border-b border-ctm-border overflow-hidden">
+      {/* SECTION 1: HEAT 2.0 (Image Left, Story Right) */}
+      <div className="py-24 sm:py-32 border-b border-ctm-borderSubtle">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Image Column */}
+            <div className="lg:col-span-7 relative group">
+              <div className="relative w-full h-[450px] sm:h-[600px] bg-ctm-surface border border-ctm-border overflow-hidden flex items-center justify-center p-8">
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-transparent to-white/5 pointer-events-none" />
+                <Image
+                  src={heat2.images[0]?.url || "/images/products/heat-2-main.svg"}
+                  alt={heat2.name}
+                  fill
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute bottom-6 left-6 px-3 py-1.5 bg-black/80 border border-ctm-border text-[10px] font-mono tracking-widest text-ctm-lightMuted uppercase">
+                  6063 ANODIZED ALUMINUM // ELEVATION 01
+                </div>
+              </div>
+            </div>
+
+            {/* Content Column */}
+            <div className="lg:col-span-5 space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-ctm-surface border border-ctm-border">
+                <span className="w-1.5 h-1.5 bg-ctm-red" />
+                <span className="text-[10px] font-mono tracking-widest text-ctm-red uppercase">
+                  ENGINEERING SPOTLIGHT
+                </span>
+              </div>
+
+              <div>
+                <h2 className="text-4xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-white leading-none">
+                  {heat2.name}
+                </h2>
+                <p className="text-lg sm:text-xl font-display text-ctm-lightMuted mt-3">
+                  &ldquo;Built around the way collectors actually live.&rdquo;
+                </p>
+              </div>
+
+              <p className="text-sm text-ctm-muted font-normal leading-relaxed">
+                {heat2.longDesc}
+              </p>
+
+              {/* Architectural Specifications Table */}
+              <div className="grid grid-cols-2 gap-4 py-6 border-y border-ctm-borderSubtle text-xs font-mono">
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Capacity
+                  </span>
+                  <span className="text-white font-medium">{heat2.capacity}</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Dimensions
+                  </span>
+                  <span className="text-white font-medium">{heat2.dimensions}</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Material
+                  </span>
+                  <span className="text-white font-medium">{heat2.material}</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Finish
+                  </span>
+                  <span className="text-white font-medium">{heat2.finish}</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Tare Weight
+                  </span>
+                  <span className="text-white font-medium">{heat2.weight}</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Warranty
+                  </span>
+                  <span className="text-white font-medium">{heat2.warranty}</span>
+                </div>
+              </div>
+
+              <div>
+                <Button
+                  href={`/products/${heat2.slug}`}
+                  variant="primary"
+                  size="md"
+                  className="flex items-center gap-2"
+                >
+                  <span>EXPLORE HEAT 2.0</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 2: SNEAKER TRUNK (Content Left, Image Right) */}
+      <div className="py-24 sm:py-32 bg-[#060606]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Content Column */}
+            <div className="lg:col-span-5 space-y-8 order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-ctm-surface border border-ctm-border">
+                <span className="w-1.5 h-1.5 bg-ctm-red" />
+                <span className="text-[10px] font-mono tracking-widest text-ctm-red uppercase">
+                  HERITAGE SERIES
+                </span>
+              </div>
+
+              <div>
+                <h2 className="text-4xl sm:text-5xl font-display font-extrabold uppercase tracking-tight text-white leading-none">
+                  {sneakerTrunk.name}
+                </h2>
+                <p className="text-lg sm:text-xl font-display text-ctm-lightMuted mt-3">
+                  &ldquo;Transatlantic luggage heritage re-imagined for grail rotations.&rdquo;
+                </p>
+              </div>
+
+              <p className="text-sm text-ctm-muted font-normal leading-relaxed">
+                {sneakerTrunk.longDesc}
+              </p>
+
+              {/* Specifications */}
+              <div className="grid grid-cols-2 gap-4 py-6 border-y border-ctm-borderSubtle text-xs font-mono">
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Capacity
+                  </span>
+                  <span className="text-white font-medium">{sneakerTrunk.capacity}</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Dimensions
+                  </span>
+                  <span className="text-white font-medium">{sneakerTrunk.dimensions}</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Interior
+                  </span>
+                  <span className="text-white font-medium">Italian Micro-Suede</span>
+                </div>
+                <div>
+                  <span className="text-ctm-muted block uppercase text-[10px]">
+                    Locking
+                  </span>
+                  <span className="text-white font-medium">TSA Mechanical Brass</span>
+                </div>
+              </div>
+
+              <div>
+                <Button
+                  href={`/products/${sneakerTrunk.slug}`}
+                  variant="outline"
+                  size="md"
+                  className="flex items-center gap-2"
+                >
+                  <span>INSPECT SNEAKER TRUNK</span>
+                  <ArrowRight className="w-4 h-4 text-ctm-red" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Image Column */}
+            <div className="lg:col-span-7 relative group order-1 lg:order-2">
+              <div className="relative w-full h-[450px] sm:h-[600px] bg-ctm-surface border border-ctm-border overflow-hidden flex items-center justify-center p-8">
+                <div className="absolute inset-0 bg-gradient-to-tl from-black/80 via-transparent to-white/5 pointer-events-none" />
+                <Image
+                  src={sneakerTrunk.images[0]?.url || "/images/products/sneaker-trunk-main.svg"}
+                  alt={sneakerTrunk.name}
+                  fill
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute bottom-6 right-6 px-3 py-1.5 bg-black/80 border border-ctm-border text-[10px] font-mono tracking-widest text-ctm-lightMuted uppercase">
+                  COMPOSITE CORE // SOLID BRASS HARDWARE
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
