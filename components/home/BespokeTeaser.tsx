@@ -97,22 +97,25 @@ export function BespokeTeaser() {
           })}
         </div>
 
-        {/* CTA Banner: Bold Black Block with Red CTA */}
-        <div className="p-8 sm:p-12 bg-black text-white border border-neutral-900 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div>
-            <h3 className="text-2xl font-display font-bold uppercase text-white tracking-wide">
-              Initiate Your Commission
+        {/* CTA Banner: Bold Crimson Red Signature Block with Jet Black CTA */}
+        <div className="p-8 sm:p-12 bg-ctm-red text-white border-2 border-black flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+          <div className="relative z-10">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-black text-white text-[10px] font-mono tracking-widest uppercase mb-2">
+              EXCLUSIVE ATELIER ACCESS
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-display font-black uppercase text-white tracking-wide">
+              Initiate Your Bespoke Commission
             </h3>
-            <p className="text-xs sm:text-sm text-neutral-400 mt-1 font-mono">
+            <p className="text-xs sm:text-sm text-white/90 mt-1 font-mono">
               Lead times for bespoke architectural chambers currently range from 4–8 weeks.
             </p>
           </div>
 
           <Button
             href="/bespoke"
-            variant="accent"
+            variant="secondary"
             size="lg"
-            className="w-full md:w-auto shrink-0 flex items-center justify-center gap-2 shadow-lg shadow-ctm-red/25"
+            className="w-full md:w-auto shrink-0 flex items-center justify-center gap-2 bg-black hover:bg-white hover:text-black text-white border-2 border-black shadow-xl"
           >
             <span>START A BESPOKE PROJECT</span>
             <ArrowRight className="w-4 h-4" />

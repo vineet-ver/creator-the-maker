@@ -62,16 +62,16 @@ export function ShopCatalog() {
   return (
     <div className="w-full">
       {/* Search & Filter Bar */}
-      <div className="bg-white border border-ctm-border p-4 sm:p-6 mb-8 flex flex-col md:flex-row gap-4 justify-between items-center shadow-sm">
+      <div className="bg-[#09090B] text-white border border-neutral-800 p-4 sm:p-6 mb-8 flex flex-col md:flex-row gap-4 justify-between items-center shadow-lg">
         {/* Search Input */}
         <div className="relative w-full md:w-80">
-          <Search className="w-4 h-4 text-ctm-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Filter models or SKU..."
-            className="w-full bg-ctm-surfaceSubtle border border-ctm-border pl-10 pr-4 py-2.5 text-xs font-mono text-black placeholder-ctm-muted focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
+            className="w-full bg-neutral-900 border border-neutral-700 pl-10 pr-4 py-2.5 text-xs font-mono text-white placeholder-neutral-500 focus:outline-none focus:border-ctm-red transition-colors"
           />
         </div>
 
@@ -81,7 +81,7 @@ export function ShopCatalog() {
           <select
             value={selectedCollection}
             onChange={(e) => setSelectedCollection(e.target.value)}
-            className="bg-ctm-surfaceSubtle border border-ctm-border px-3 py-2 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
+            className="bg-neutral-900 border border-neutral-700 px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-ctm-red uppercase cursor-pointer"
           >
             <option value="all">All Collections</option>
             {COLLECTIONS.filter((c) => c.slug !== "bespoke").map((c) => (
@@ -95,7 +95,7 @@ export function ShopCatalog() {
           <select
             value={selectedCapacity}
             onChange={(e) => setSelectedCapacity(e.target.value)}
-            className="bg-ctm-surfaceSubtle border border-ctm-border px-3 py-2 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
+            className="bg-neutral-900 border border-neutral-700 px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-ctm-red uppercase cursor-pointer"
           >
             <option value="all">All Capacities</option>
             <option value="compact">Compact (4-6 Pairs)</option>
@@ -107,7 +107,7 @@ export function ShopCatalog() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="bg-ctm-surfaceSubtle border border-ctm-border px-3 py-2 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
+            className="bg-neutral-900 border border-neutral-700 px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-ctm-red uppercase cursor-pointer"
           >
             <option value="featured">Featured Archive</option>
             <option value="price-asc">Price: Low to High</option>

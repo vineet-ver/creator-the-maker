@@ -38,15 +38,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-black text-white hover:bg-ctm-red hover:text-white border border-black hover:border-ctm-red shadow-md shadow-black/10",
+        "bg-ctm-red text-white hover:bg-black hover:text-white border border-ctm-red hover:border-black shadow-md shadow-ctm-red/20",
       secondary:
-        "bg-ctm-surfaceSubtle text-black hover:bg-black hover:text-white border border-ctm-borderLight",
+        "bg-black text-white hover:bg-ctm-red hover:text-white border border-black hover:border-ctm-red shadow-sm",
       outline:
-        "bg-transparent text-black border border-black hover:bg-ctm-red hover:border-ctm-red hover:text-white",
+        "bg-transparent text-black border-2 border-black hover:bg-black hover:text-white",
       accent:
-        "bg-ctm-red text-white hover:bg-ctm-redHover border border-ctm-red shadow-lg shadow-ctm-red/20",
+        "bg-ctm-red text-white hover:bg-black hover:border-black border border-ctm-red shadow-lg shadow-ctm-red/30",
       ghost:
-        "bg-transparent text-ctm-muted hover:text-black hover:bg-black/5 border border-transparent",
+        "bg-transparent text-black/70 hover:text-black hover:bg-black/5 border border-transparent",
     };
 
     const combinedClasses = cn(

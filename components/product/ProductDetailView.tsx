@@ -331,22 +331,22 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
         </div>
 
         {/* Technical Data Sheet Table */}
-        <div className="bg-ctm-surfaceSubtle/50 border border-ctm-border p-6 sm:p-10 shadow-sm">
-          <h3 className="text-lg font-display font-black uppercase tracking-wider text-black mb-6 flex items-center gap-2">
-            <span className="w-2 h-2 bg-ctm-red" />
+        <div className="bg-[#09090B] text-white border border-neutral-800 p-6 sm:p-10 shadow-xl">
+          <h3 className="text-lg font-display font-black uppercase tracking-wider text-white mb-6 flex items-center gap-2">
+            <span className="w-2 h-2 bg-ctm-red animate-pulse" />
             TECHNICAL SPECIFICATIONS SPEC SHEET
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 divide-y md:divide-y-0 divide-ctm-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 divide-y md:divide-y-0 divide-neutral-800">
             {product.specifications.map((spec, idx) => (
               <div
                 key={idx}
-                className="py-3 border-b border-ctm-border flex items-baseline justify-between text-xs font-mono"
+                className="py-3 border-b border-neutral-800 flex items-baseline justify-between text-xs font-mono"
               >
-                <span className="text-ctm-muted uppercase tracking-wider">
+                <span className="text-neutral-400 uppercase tracking-wider">
                   {spec.label}
                 </span>
-                <span className="text-black font-bold text-right pl-4">
+                <span className="text-white font-bold text-right pl-4">
                   {spec.value}
                 </span>
               </div>

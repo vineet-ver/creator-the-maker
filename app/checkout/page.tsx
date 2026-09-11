@@ -433,16 +433,16 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            {/* Right Summary Panel */}
-            <div className="lg:col-span-5 bg-white border border-ctm-border p-6 sm:p-8 space-y-6 shadow-sm">
-              <h3 className="font-display font-black text-lg uppercase tracking-wider text-black">
+            {/* Right Summary Panel: Jet Black Manifest Card */}
+            <div className="lg:col-span-5 bg-[#09090B] text-white border border-neutral-800 p-6 sm:p-8 space-y-6 shadow-2xl">
+              <h3 className="font-display font-black text-lg uppercase tracking-wider text-white">
                 MANIFEST REVIEW ({items.length})
               </h3>
 
-              <div className="space-y-4 divide-y divide-ctm-border max-h-80 overflow-y-auto pr-2">
+              <div className="space-y-4 divide-y divide-neutral-800 max-h-80 overflow-y-auto pr-2">
                 {items.map((item) => (
                   <div key={item.id} className="pt-4 first:pt-0 flex gap-4">
-                    <div className="relative w-16 h-16 bg-ctm-surfaceSubtle/30 border border-ctm-border shrink-0 flex items-center justify-center p-1">
+                    <div className="relative w-16 h-16 bg-neutral-900 border border-neutral-800 shrink-0 flex items-center justify-center p-1">
                       <Image
                         src={item.product.images[0]?.url || "/images/products/heat-2-main.svg"}
                         alt={item.product.name}
@@ -452,14 +452,14 @@ export default function CheckoutPage() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start">
-                        <span className="font-display font-bold text-sm uppercase text-black">
+                        <span className="font-display font-bold text-sm uppercase text-white">
                           {item.product.name}
                         </span>
-                        <span className="font-mono text-xs font-bold text-black">
+                        <span className="font-mono text-xs font-bold text-white">
                           {formatPrice(item.price * item.quantity)}
                         </span>
                       </div>
-                      <p className="text-[10px] font-mono text-ctm-muted mt-0.5">
+                      <p className="text-[10px] font-mono text-neutral-400 mt-0.5">
                         Qty: {item.quantity} • {item.selectedFinish}
                       </p>
                     </div>
@@ -467,24 +467,24 @@ export default function CheckoutPage() {
                 ))}
               </div>
 
-              <div className="border-t border-ctm-border pt-4 space-y-2 text-xs font-mono">
-                <div className="flex justify-between text-ctm-muted">
+              <div className="border-t border-neutral-800 pt-4 space-y-2 text-xs font-mono">
+                <div className="flex justify-between text-neutral-400">
                   <span>SUBTOTAL</span>
-                  <span className="text-black font-bold">{formatPrice(subtotal)}</span>
+                  <span className="text-white font-bold">{formatPrice(subtotal)}</span>
                 </div>
-                <div className="flex justify-between text-ctm-muted">
+                <div className="flex justify-between text-neutral-400">
                   <span>WHITE-GLOVE LOGISTICS</span>
-                  <span className="text-emerald-600 font-bold">COMPLIMENTARY</span>
+                  <span className="text-ctm-red font-bold">COMPLIMENTARY</span>
                 </div>
-                <div className="flex justify-between text-ctm-muted">
+                <div className="flex justify-between text-neutral-400">
                   <span>ESTIMATED TAX</span>
-                  <span className="text-black font-semibold">$0.00</span>
+                  <span className="text-white font-semibold">$0.00</span>
                 </div>
-                <div className="flex justify-between items-baseline pt-3 border-t border-ctm-border">
-                  <span className="font-display font-bold text-base uppercase text-black">
+                <div className="flex justify-between items-baseline pt-3 border-t border-neutral-800">
+                  <span className="font-display font-bold text-base uppercase text-white">
                     TOTAL
                   </span>
-                  <span className="font-mono text-2xl font-black text-black">
+                  <span className="font-mono text-2xl font-black text-white">
                     {formatPrice(subtotal)}
                   </span>
                 </div>
@@ -495,7 +495,7 @@ export default function CheckoutPage() {
                 disabled={isProcessing}
                 variant="accent"
                 size="xl"
-                className="w-full flex items-center justify-center gap-2"
+                className="w-full flex items-center justify-center gap-2 shadow-lg shadow-ctm-red/30"
               >
                 {isProcessing ? (
                   <span>AUTHORIZING TRANSACTION...</span>
@@ -507,9 +507,9 @@ export default function CheckoutPage() {
                 )}
               </Button>
 
-              <div className="text-[11px] font-mono text-ctm-muted space-y-2 text-center pt-2">
+              <div className="text-[11px] font-mono text-neutral-400 space-y-2 text-center pt-2">
                 <p>By placing order you authorize Creator The Maker fabrication terms.</p>
-                <div className="flex items-center justify-center gap-1.5 text-emerald-600 font-semibold">
+                <div className="flex items-center justify-center gap-1.5 text-ctm-red font-semibold">
                   <ShieldCheck className="w-3.5 h-3.5" />
                   <span>5-Year Structural Guarantee Active</span>
                 </div>

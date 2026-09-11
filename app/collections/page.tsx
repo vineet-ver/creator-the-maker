@@ -28,7 +28,11 @@ export default function CollectionsPage() {
             <Link
               key={col.id}
               href={col.slug === "bespoke" ? "/bespoke" : `/collections/${col.slug}`}
-              className="group relative h-[500px] bg-ctm-surfaceSubtle/60 border border-ctm-border hover:border-black transition-all duration-500 overflow-hidden flex flex-col justify-between p-8 shadow-sm hover:shadow-xl hover:shadow-black/5"
+              className={`group relative h-[500px] transition-all duration-500 overflow-hidden flex flex-col justify-between p-8 shadow-sm hover:shadow-xl ${
+                col.slug === "bespoke"
+                  ? "bg-[#09090B] text-white border border-neutral-800 hover:border-ctm-red"
+                  : "bg-ctm-surfaceSubtle/60 text-black border border-ctm-border hover:border-black hover:shadow-black/5"
+              }`}
             >
               <div className="absolute inset-0 z-0">
                 <Image
@@ -37,26 +41,54 @@ export default function CollectionsPage() {
                   fill
                   className="object-contain p-8 opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent" />
+                <div
+                  className={`absolute inset-0 ${
+                    col.slug === "bespoke"
+                      ? "bg-gradient-to-t from-[#09090B] via-[#09090B]/60 to-transparent"
+                      : "bg-gradient-to-t from-white via-white/50 to-transparent"
+                  }`}
+                />
               </div>
 
               <div className="relative z-10 flex items-center justify-between">
-                <span className="text-xs font-mono text-ctm-muted tracking-widest uppercase">
+                <span
+                  className={`text-xs font-mono tracking-widest uppercase ${
+                    col.slug === "bespoke" ? "text-neutral-400" : "text-ctm-muted"
+                  }`}
+                >
                   SERIES 0{index + 1}
                 </span>
-                <span className="w-8 h-8 border border-ctm-border bg-white flex items-center justify-center text-black group-hover:border-ctm-red group-hover:bg-ctm-red group-hover:text-white transition-all">
+                <span
+                  className={`w-8 h-8 border flex items-center justify-center transition-all ${
+                    col.slug === "bespoke"
+                      ? "border-neutral-700 bg-neutral-900 text-white group-hover:border-ctm-red group-hover:bg-ctm-red"
+                      : "border-ctm-border bg-white text-black group-hover:border-ctm-red group-hover:bg-ctm-red group-hover:text-white"
+                  }`}
+                >
                   <ArrowUpRight className="w-4 h-4" />
                 </span>
               </div>
 
               <div className="relative z-10 space-y-2">
-                <h2 className="text-3xl font-display font-extrabold uppercase tracking-wide text-black group-hover:text-ctm-red transition-colors">
+                <h2
+                  className={`text-3xl font-display font-extrabold uppercase tracking-wide group-hover:text-ctm-red transition-colors ${
+                    col.slug === "bespoke" ? "text-white" : "text-black"
+                  }`}
+                >
                   {col.name}
                 </h2>
-                <p className="text-xs text-ctm-lightMuted font-display tracking-wider font-semibold">
+                <p
+                  className={`text-xs font-display tracking-wider font-semibold ${
+                    col.slug === "bespoke" ? "text-neutral-300" : "text-ctm-lightMuted"
+                  }`}
+                >
                   {col.tagline}
                 </p>
-                <p className="text-xs text-ctm-muted leading-relaxed line-clamp-2 pt-1 font-normal">
+                <p
+                  className={`text-xs leading-relaxed line-clamp-2 pt-1 font-normal ${
+                    col.slug === "bespoke" ? "text-neutral-400" : "text-ctm-muted"
+                  }`}
+                >
                   {col.description}
                 </p>
               </div>

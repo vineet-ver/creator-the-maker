@@ -44,18 +44,18 @@ export function CartDrawer() {
       <div className="fixed inset-y-0 right-0 flex max-w-full pl-6 sm:pl-10">
         <div className="w-screen max-w-md bg-white border-l border-ctm-border shadow-2xl flex flex-col justify-between animate-fade-in text-black">
           {/* Header */}
-          <div className="p-6 border-b border-ctm-border flex items-center justify-between">
+          <div className="p-6 bg-black text-white border-b border-neutral-800 flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-display font-bold uppercase tracking-wider text-black">
+              <h2 className="text-xl font-display font-bold uppercase tracking-wider text-white">
                 Cart Vault
               </h2>
-              <p className="text-xs font-mono text-ctm-muted tracking-widest mt-0.5">
+              <p className="text-xs font-mono text-neutral-400 tracking-widest mt-0.5">
                 {items.length} {items.length === 1 ? "UNIT ALLOCATED" : "UNITS ALLOCATED"}
               </p>
             </div>
             <button
               onClick={closeCart}
-              className="p-2 text-ctm-muted hover:text-black border border-ctm-border hover:border-black transition-colors"
+              className="p-2 text-neutral-400 hover:text-ctm-red border border-neutral-800 hover:border-ctm-red transition-colors"
               aria-label="Close cart drawer"
             >
               <X className="w-5 h-5" />
