@@ -26,7 +26,7 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
+    <div className="pt-32 pb-24 bg-white min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}

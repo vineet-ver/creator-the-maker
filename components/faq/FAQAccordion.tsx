@@ -50,7 +50,7 @@ export function FAQAccordion() {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search technical knowledge base, shipping protocols, glass specs..."
-          className="w-full bg-ctm-surface border border-ctm-border pl-12 pr-4 py-3.5 text-xs font-mono text-white placeholder-ctm-muted focus:outline-none focus:border-ctm-red transition-colors"
+          className="w-full bg-ctm-surfaceSubtle border border-ctm-border pl-12 pr-4 py-3.5 text-xs font-mono text-black placeholder-ctm-muted focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
         />
       </div>
 
@@ -62,8 +62,8 @@ export function FAQAccordion() {
             onClick={() => setSelectedCategory(cat)}
             className={`text-xs font-mono tracking-widest uppercase px-3.5 py-2 border transition-all ${
               selectedCategory === cat
-                ? "bg-white text-black border-white font-bold"
-                : "bg-ctm-surface text-ctm-muted border-ctm-border hover:text-white hover:border-ctm-lightMuted"
+                ? "bg-black text-white border-black font-bold shadow-sm"
+                : "bg-white text-black border-ctm-border hover:border-black"
             }`}
           >
             {cat}
@@ -72,7 +72,7 @@ export function FAQAccordion() {
       </div>
 
       {/* FAQ Accordion List */}
-      <div className="bg-ctm-surface border border-ctm-border p-6 sm:p-10 space-y-4 divide-y divide-ctm-borderSubtle">
+      <div className="bg-white border border-ctm-border p-6 sm:p-10 space-y-4 divide-y divide-ctm-border shadow-sm">
         {filteredFaqs.length > 0 ? (
           filteredFaqs.map((item) => {
             const isOpen = !!openIds[item.id];
@@ -84,22 +84,22 @@ export function FAQAccordion() {
                   aria-expanded={isOpen}
                 >
                   <div className="space-y-1">
-                    <span className="text-[10px] font-mono text-ctm-red tracking-widest uppercase block">
+                    <span className="text-[10px] font-mono text-ctm-red tracking-widest uppercase block font-bold">
                       {item.category}
                     </span>
-                    <span className="text-base sm:text-lg font-display font-bold uppercase text-white group-hover:text-ctm-red transition-colors">
+                    <span className="text-base sm:text-lg font-display font-black uppercase text-black group-hover:text-ctm-red transition-colors">
                       {item.question}
                     </span>
                   </div>
                   <ChevronDown
-                    className={`w-4 h-4 text-ctm-muted group-hover:text-white transition-transform duration-300 shrink-0 mt-1 ${
+                    className={`w-4 h-4 text-ctm-muted group-hover:text-black transition-transform duration-300 shrink-0 mt-1 ${
                       isOpen ? "rotate-180 text-ctm-red" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="pb-6 pr-6 text-xs sm:text-sm text-ctm-muted font-normal leading-relaxed animate-fade-in">
+                  <div className="pb-6 pr-6 text-xs sm:text-sm text-ctm-lightMuted font-normal leading-relaxed animate-fade-in">
                     {item.answer}
                   </div>
                 )}

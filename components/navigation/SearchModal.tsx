@@ -69,9 +69,9 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-start pt-16 sm:pt-24 px-4 bg-black/85 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-start pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-md animate-fade-in">
       <div
-        className="w-full max-w-3xl bg-ctm-surface border border-ctm-borderLight shadow-2xl overflow-hidden"
+        className="w-full max-w-3xl bg-white border border-ctm-border shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Bar Header */}
@@ -83,12 +83,12 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search archive by model, collection, finish, or SKU..."
-            className="w-full bg-transparent text-white placeholder-ctm-muted text-base sm:text-lg font-display focus:outline-none tracking-wide"
+            className="w-full bg-transparent text-black placeholder-ctm-muted text-base sm:text-lg font-display focus:outline-none tracking-wide"
           />
           {query && (
             <button
               onClick={() => setQuery("")}
-              className="p-1 text-ctm-muted hover:text-white mr-2"
+              className="p-1 text-ctm-muted hover:text-black mr-2"
               aria-label="Clear query"
             >
               <X className="w-4 h-4" />
@@ -96,7 +96,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           )}
           <button
             onClick={onClose}
-            className="px-2.5 py-1 text-xs font-mono tracking-widest text-ctm-muted border border-ctm-border hover:text-white hover:border-ctm-lightMuted transition-colors uppercase"
+            className="px-2.5 py-1 text-xs font-mono tracking-widest text-ctm-muted border border-ctm-border hover:text-black hover:border-black transition-colors uppercase"
           >
             ESC
           </button>
@@ -105,7 +105,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
         {/* Results Container */}
         <div className="max-h-[60vh] overflow-y-auto divide-y divide-ctm-borderSubtle">
           {query.trim() === "" ? (
-            <div className="p-8 text-center">
+            <div className="p-8 text-center bg-white">
               <p className="text-xs font-mono uppercase tracking-widest text-ctm-muted mb-3">
                 Suggested Searches
               </p>
@@ -115,7 +115,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     <button
                       key={term}
                       onClick={() => setQuery(term)}
-                      className="text-xs font-mono px-3 py-1.5 bg-ctm-surfaceHover border border-ctm-border text-ctm-lightMuted hover:text-white hover:border-ctm-red transition-colors"
+                      className="text-xs font-mono px-3 py-1.5 bg-ctm-surfaceSubtle border border-ctm-border text-black hover:border-ctm-red hover:text-ctm-red transition-colors"
                     >
                       {term}
                     </button>
@@ -124,7 +124,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               </div>
             </div>
           ) : results.length > 0 ? (
-            <div className="py-2">
+            <div className="py-2 bg-white">
               <div className="px-6 py-2 text-[10px] font-mono tracking-widest text-ctm-muted uppercase">
                 {results.length} Matching Hardware Units
               </div>
@@ -133,10 +133,10 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   key={product.id}
                   href={`/products/${product.slug}`}
                   onClick={onClose}
-                  className="group flex items-center justify-between px-6 py-4 hover:bg-ctm-surfaceHover transition-colors"
+                  className="group flex items-center justify-between px-6 py-4 hover:bg-ctm-surfaceSubtle transition-colors"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="relative w-14 h-14 bg-black border border-ctm-border flex items-center justify-center overflow-hidden shrink-0">
+                    <div className="relative w-14 h-14 bg-ctm-surfaceSubtle border border-ctm-border flex items-center justify-center overflow-hidden shrink-0">
                       <Image
                         src={product.images[0]?.url || "/images/products/heat-2-main.svg"}
                         alt={product.name}
@@ -146,7 +146,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-display font-bold text-white text-base tracking-wide group-hover:text-ctm-red transition-colors">
+                        <span className="font-display font-bold text-black text-base tracking-wide group-hover:text-ctm-red transition-colors">
                           {product.name}
                         </span>
                         <span className="text-[10px] font-mono text-ctm-muted px-1.5 py-0.5 border border-ctm-border">
@@ -160,7 +160,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   </div>
 
                   <div className="flex items-center gap-4 text-right">
-                    <span className="font-mono text-sm font-semibold text-white">
+                    <span className="font-mono text-sm font-semibold text-black">
                       {formatPrice(product.price)}
                     </span>
                     <ArrowRight className="w-4 h-4 text-ctm-muted group-hover:text-ctm-red group-hover:translate-x-1 transition-all" />
@@ -169,8 +169,8 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               ))}
             </div>
           ) : (
-            <div className="py-12 text-center">
-              <p className="text-base text-ctm-lightMuted font-display">
+            <div className="py-12 text-center bg-white">
+              <p className="text-base text-black font-display">
                 No matching architectural hardware found.
               </p>
               <p className="text-xs text-ctm-muted mt-2 font-mono">
@@ -188,7 +188,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
         </div>
 
         {/* Footer info */}
-        <div className="px-6 py-3 bg-black/60 border-t border-ctm-border flex items-center justify-between text-[11px] font-mono text-ctm-muted">
+        <div className="px-6 py-3 bg-ctm-surfaceSubtle border-t border-ctm-border flex items-center justify-between text-[11px] font-mono text-ctm-muted">
           <span>Search Engine // Precision Architecture</span>
           <span className="flex items-center gap-1">
             Navigate with <CornerDownLeft className="w-3 h-3 inline" /> ENTER

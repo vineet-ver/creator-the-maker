@@ -42,19 +42,19 @@ export default async function CollectionDetailPage({ params }: Props) {
   const products = getProductsByCollection(slug);
 
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
+    <div className="pt-32 pb-24 bg-white min-h-screen">
       <Container size="wide">
         {/* Back Link */}
         <Link
           href="/collections"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-ctm-muted hover:text-white mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-ctm-muted hover:text-black mb-8 transition-colors"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>ALL COLLECTIONS</span>
         </Link>
 
         {/* Collection Hero Banner */}
-        <div className="relative bg-ctm-surface border border-ctm-border p-8 sm:p-16 mb-16 overflow-hidden">
+        <div className="relative bg-ctm-surfaceSubtle border border-ctm-border p-8 sm:p-16 mb-16 overflow-hidden shadow-sm">
           <div className="max-w-2xl relative z-10 space-y-4">
             <div className="inline-flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-ctm-red" />
@@ -62,10 +62,10 @@ export default async function CollectionDetailPage({ params }: Props) {
                 DIVISION SPECIFICATION
               </span>
             </div>
-            <h1 className="text-4xl sm:text-6xl font-display font-black uppercase text-white tracking-tight leading-none">
+            <h1 className="text-4xl sm:text-6xl font-display font-black uppercase text-black tracking-tight leading-none">
               {collection.name}
             </h1>
-            <p className="text-lg text-ctm-lightMuted font-display">
+            <p className="text-lg text-ctm-lightMuted font-display font-semibold">
               {collection.tagline}
             </p>
             <p className="text-sm text-ctm-muted leading-relaxed font-normal pt-2">
@@ -73,7 +73,7 @@ export default async function CollectionDetailPage({ params }: Props) {
             </p>
           </div>
 
-          <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-20 pointer-events-none hidden lg:block">
+          <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-25 pointer-events-none hidden lg:block">
             <Image
               src={collection.coverImage}
               alt={collection.name}
@@ -96,7 +96,7 @@ export default async function CollectionDetailPage({ params }: Props) {
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="group bg-ctm-surface border border-ctm-border hover:border-ctm-borderLight flex flex-col justify-between transition-all duration-300"
+                  className="group bg-white border border-ctm-border hover:border-black/30 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-black/5"
                 >
                   <div className="p-4 flex items-center justify-between">
                     <span className="text-[10px] font-mono text-ctm-muted uppercase">
@@ -107,7 +107,7 @@ export default async function CollectionDetailPage({ params }: Props) {
 
                   <Link
                     href={`/products/${product.slug}`}
-                    className="relative w-full h-72 flex items-center justify-center p-6 overflow-hidden"
+                    className="relative w-full h-72 flex items-center justify-center p-6 overflow-hidden bg-ctm-surfaceSubtle/30"
                   >
                     <Image
                       src={product.images[0]?.url || "/images/products/heat-2-main.svg"}
@@ -117,15 +117,15 @@ export default async function CollectionDetailPage({ params }: Props) {
                     />
                   </Link>
 
-                  <div className="p-6 border-t border-ctm-borderSubtle bg-ctm-surface">
+                  <div className="p-6 border-t border-ctm-border bg-white">
                     <div className="flex items-baseline justify-between mb-2">
                       <Link
                         href={`/products/${product.slug}`}
-                        className="font-display font-bold text-xl text-white hover:text-ctm-red transition-colors uppercase"
+                        className="font-display font-bold text-xl text-black hover:text-ctm-red transition-colors uppercase"
                       >
                         {product.name}
                       </Link>
-                      <span className="font-mono text-lg font-bold text-white">
+                      <span className="font-mono text-lg font-bold text-black">
                         {formatPrice(product.price)}
                       </span>
                     </div>
@@ -148,8 +148,8 @@ export default async function CollectionDetailPage({ params }: Props) {
               ))}
             </div>
           ) : (
-            <div className="py-24 text-center border border-ctm-border bg-ctm-surface">
-              <p className="text-lg font-display text-white">
+            <div className="py-24 text-center border border-ctm-border bg-ctm-surfaceSubtle">
+              <p className="text-lg font-display text-black font-bold uppercase">
                 Bespoke architectural commissions are engineered on custom project basis.
               </p>
               <div className="mt-6">

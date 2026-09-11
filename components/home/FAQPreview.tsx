@@ -15,7 +15,7 @@ export function FAQPreview() {
   };
 
   return (
-    <section className="py-24 sm:py-32 bg-[#080808] border-b border-ctm-border">
+    <section className="py-24 sm:py-32 bg-white border-b border-ctm-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="INTELLIGENCE & SUPPORT"
@@ -39,19 +39,19 @@ export function FAQPreview() {
                     <span className="text-[11px] font-mono text-ctm-muted">
                       0{idx + 1}
                     </span>
-                    <span className="text-base sm:text-lg font-display font-bold uppercase tracking-wide text-white group-hover:text-ctm-red transition-colors">
+                    <span className="text-base sm:text-lg font-display font-bold uppercase tracking-wide text-black group-hover:text-ctm-red transition-colors">
                       {item.question}
                     </span>
                   </div>
                   <ChevronDown
-                    className={`w-4 h-4 text-ctm-muted group-hover:text-white transition-transform duration-300 shrink-0 ${
+                    className={`w-4 h-4 text-ctm-muted group-hover:text-black transition-transform duration-300 shrink-0 ${
                       isOpen ? "rotate-180 text-ctm-red" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="pb-6 pl-9 pr-4 text-sm text-ctm-muted font-normal leading-relaxed animate-fade-in">
+                  <div className="pb-6 pl-9 pr-4 text-sm text-ctm-lightMuted font-normal leading-relaxed animate-fade-in">
                     {item.answer}
                   </div>
                 )}
@@ -63,7 +63,7 @@ export function FAQPreview() {
         <div className="mt-12 text-center">
           <Link
             href="/faq"
-            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white hover:text-ctm-red transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-black hover:text-ctm-red transition-colors font-bold"
           >
             <span>VIEW COMPLETE TECHNICAL FAQ</span>
             <ArrowRight className="w-3.5 h-3.5 text-ctm-red" />

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ShippingPolicyPage() {
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen text-white">
+    <div className="pt-32 pb-24 bg-white min-h-screen text-black">
       <Container size="narrow">
         <SectionHeading
           eyebrow="LOGISTICS PROTOCOL"
@@ -18,13 +18,13 @@ export default function ShippingPolicyPage() {
           description="Flight crating and white-glove in-room placement."
         />
 
-        <div className="p-4 bg-ctm-red/10 border border-ctm-red/30 text-xs font-mono text-ctm-red mb-8">
+        <div className="p-4 bg-red-50 border border-red-200 text-xs font-mono text-ctm-red font-bold mb-8">
           [NOTICE: REPLACE WITH BUSINESS-APPROVED LEGAL COPY PRIOR TO COMMERCIAL LAUNCH]
         </div>
 
-        <div className="bg-ctm-surface border border-ctm-border p-8 sm:p-12 space-y-8 text-sm text-ctm-muted leading-relaxed font-normal">
+        <div className="bg-white border border-ctm-border p-8 sm:p-12 space-y-8 text-sm text-ctm-lightMuted leading-relaxed font-normal shadow-sm">
           <section className="space-y-3">
-            <h2 className="text-base font-display font-bold uppercase tracking-wider text-white">
+            <h2 className="text-base font-display font-black uppercase tracking-wider text-black">
               1. Specialized Flight Crating
             </h2>
             <p>
@@ -36,7 +36,7 @@ export default function ShippingPolicyPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-base font-display font-bold uppercase tracking-wider text-white">
+            <h2 className="text-base font-display font-black uppercase tracking-wider text-black">
               2. White-Glove In-Room Delivery
             </h2>
             <p>

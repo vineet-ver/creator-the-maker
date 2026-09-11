@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
+    <div className="pt-32 pb-24 bg-white min-h-screen">
       <Container size="wide">
         <SectionHeading
           eyebrow="GLOBAL PORTFOLIO"

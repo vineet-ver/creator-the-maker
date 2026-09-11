@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen text-white">
+    <div className="pt-32 pb-24 bg-white min-h-screen text-black">
       <Container size="wide">
         <SectionHeading
           eyebrow="DIRECT ACCESS"
@@ -26,15 +26,15 @@ export default function ContactPage() {
           {/* Direct Communication Channels */}
           <div className="lg:col-span-5 space-y-6">
             {/* WhatsApp Priority Card */}
-            <div className="p-8 bg-ctm-surface border border-ctm-border hover:border-ctm-red transition-colors space-y-4">
-              <div className="inline-flex items-center gap-2 text-ctm-red text-xs font-mono tracking-widest uppercase">
+            <div className="p-8 bg-white border border-ctm-border hover:border-black transition-colors space-y-4 shadow-sm">
+              <div className="inline-flex items-center gap-2 text-ctm-red text-xs font-mono tracking-widest uppercase font-bold">
                 <span className="w-2 h-2 rounded-full bg-ctm-red animate-ping" />
                 <span>DIRECT CHAT</span>
               </div>
-              <h3 className="text-2xl font-display font-bold uppercase tracking-wide">
+              <h3 className="text-2xl font-display font-black uppercase tracking-wide text-black">
                 WhatsApp Concierge
               </h3>
-              <p className="text-xs text-ctm-muted leading-relaxed font-normal">
+              <p className="text-xs text-ctm-lightMuted leading-relaxed font-normal">
                 Direct instantaneous communication with our lead architectural
                 consultant for quick product questions, spec sheet PDFs, or CAD
                 floorplan reviews.
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 href={getWhatsAppUrl({ type: "general" })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white hover:text-ctm-red transition-colors pt-2"
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-black hover:text-ctm-red transition-colors pt-2 font-bold"
               >
                 <MessageCircle className="w-4 h-4 text-ctm-red" />
                 <span>CHAT WITH US NOW →</span>
@@ -51,14 +51,14 @@ export default function ContactPage() {
             </div>
 
             {/* Studio Headquarters & Channels */}
-            <div className="p-8 bg-ctm-surface border border-ctm-border space-y-6 text-xs font-mono">
+            <div className="p-8 bg-white border border-ctm-border space-y-6 text-xs font-mono shadow-sm">
               <div className="flex items-start gap-4">
                 <MapPin className="w-4 h-4 text-ctm-red shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-ctm-muted uppercase block text-[10px]">
+                  <span className="text-ctm-muted uppercase block text-[10px] font-bold">
                     Atelier & Showroom
                   </span>
-                  <p className="text-white font-semibold mt-0.5">
+                  <p className="text-black font-bold mt-0.5">
                     Creator The Maker Studio
                   </p>
                   <p className="text-ctm-lightMuted">
@@ -68,15 +68,15 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 pt-4 border-t border-ctm-borderSubtle">
+              <div className="flex items-start gap-4 pt-4 border-t border-ctm-border">
                 <Mail className="w-4 h-4 text-ctm-red shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-ctm-muted uppercase block text-[10px]">
+                  <span className="text-ctm-muted uppercase block text-[10px] font-bold">
                     Electronic Mail
                   </span>
                   <a
                     href="mailto:concierge@creatorthemaker.com"
-                    className="text-white hover:text-ctm-red transition-colors block mt-0.5"
+                    className="text-black hover:text-ctm-red transition-colors block mt-0.5 font-bold"
                   >
                     concierge@creatorthemaker.com
                   </a>
@@ -89,13 +89,13 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 pt-4 border-t border-ctm-borderSubtle">
+              <div className="flex items-start gap-4 pt-4 border-t border-ctm-border">
                 <Clock className="w-4 h-4 text-ctm-red shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-ctm-muted uppercase block text-[10px]">
+                  <span className="text-ctm-muted uppercase block text-[10px] font-bold">
                     Hours of Operation
                   </span>
-                  <p className="text-white mt-0.5">Monday – Friday: 09:00 – 19:00 EST</p>
+                  <p className="text-black mt-0.5 font-semibold">Monday – Friday: 09:00 – 19:00 EST</p>
                   <p className="text-ctm-lightMuted">
                     Private Showroom Appointments: Saturday & Sunday by Invitation
                   </p>

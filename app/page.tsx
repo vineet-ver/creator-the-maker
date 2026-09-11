@@ -10,7 +10,7 @@ import { FAQPreview } from "@/components/home/FAQPreview";
 
 export default function HomePage() {
   return (
-    <div className="w-full min-h-screen bg-ctm-black">
+    <div className="w-full min-h-screen bg-white">
       <Hero />
       <FeaturedProducts />
       <ProductShowcase />

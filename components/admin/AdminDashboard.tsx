@@ -104,22 +104,22 @@ export function AdminDashboard() {
       {/* Admin Nav Bar */}
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-ctm-border pb-6">
         <div>
-          <span className="text-[10px] font-mono text-ctm-red tracking-widest uppercase block">
+          <span className="text-[10px] font-mono text-ctm-red tracking-widest uppercase block font-bold">
             CONTROL CENTER
           </span>
-          <h1 className="text-3xl font-display font-black uppercase text-white tracking-wide">
+          <h1 className="text-3xl font-display font-black uppercase text-black tracking-wide">
             Studio Management Portal
           </h1>
         </div>
 
         {/* Tab Controls */}
-        <div className="flex items-center gap-2 bg-ctm-surface border border-ctm-border p-1">
+        <div className="flex items-center gap-2 bg-ctm-surfaceSubtle border border-ctm-border p-1">
           <button
             onClick={() => setActiveTab("overview")}
             className={`px-4 py-2 text-xs font-mono uppercase tracking-wider transition-colors ${
               activeTab === "overview"
-                ? "bg-white text-black font-bold"
-                : "text-ctm-lightMuted hover:text-white"
+                ? "bg-black text-white font-bold shadow-sm"
+                : "text-ctm-muted hover:text-black"
             }`}
           >
             Overview
@@ -128,8 +128,8 @@ export function AdminDashboard() {
             onClick={() => setActiveTab("products")}
             className={`px-4 py-2 text-xs font-mono uppercase tracking-wider transition-colors ${
               activeTab === "products"
-                ? "bg-white text-black font-bold"
-                : "text-ctm-lightMuted hover:text-white"
+                ? "bg-black text-white font-bold shadow-sm"
+                : "text-ctm-muted hover:text-black"
             }`}
           >
             Products ({productsList.length})
@@ -138,8 +138,8 @@ export function AdminDashboard() {
             onClick={() => setActiveTab("inquiries")}
             className={`px-4 py-2 text-xs font-mono uppercase tracking-wider transition-colors ${
               activeTab === "inquiries"
-                ? "bg-white text-black font-bold"
-                : "text-ctm-lightMuted hover:text-white"
+                ? "bg-black text-white font-bold shadow-sm"
+                : "text-ctm-muted hover:text-black"
             }`}
           >
             Bespoke ({inquiries.length})
@@ -148,8 +148,8 @@ export function AdminDashboard() {
             onClick={() => setActiveTab("orders")}
             className={`px-4 py-2 text-xs font-mono uppercase tracking-wider transition-colors ${
               activeTab === "orders"
-                ? "bg-white text-black font-bold"
-                : "text-ctm-lightMuted hover:text-white"
+                ? "bg-black text-white font-bold shadow-sm"
+                : "text-ctm-muted hover:text-black"
             }`}
           >
             Orders ({recentOrders.length})
@@ -162,23 +162,23 @@ export function AdminDashboard() {
         <div className="space-y-8 animate-fade-in">
           {/* Metric KPI Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-ctm-surface border border-ctm-border space-y-2">
-              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block">
+            <div className="p-6 bg-white border border-ctm-border space-y-2 shadow-sm">
+              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block font-bold">
                 Total Gross Revenue
               </span>
-              <div className="text-3xl font-mono font-bold text-white">
+              <div className="text-3xl font-mono font-bold text-black">
                 {formatPrice(totalRevenue)}
               </div>
-              <span className="text-[11px] font-mono text-emerald-400">
+              <span className="text-[11px] font-mono text-emerald-600 font-bold">
                 +24.5% vs previous quarter
               </span>
             </div>
 
-            <div className="p-6 bg-ctm-surface border border-ctm-border space-y-2">
-              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block">
+            <div className="p-6 bg-white border border-ctm-border space-y-2 shadow-sm">
+              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block font-bold">
                 Total Orders Dispatched
               </span>
-              <div className="text-3xl font-mono font-bold text-white">
+              <div className="text-3xl font-mono font-bold text-black">
                 {totalOrders}
               </div>
               <span className="text-[11px] font-mono text-ctm-lightMuted">
@@ -186,8 +186,8 @@ export function AdminDashboard() {
               </span>
             </div>
 
-            <div className="p-6 bg-ctm-surface border border-ctm-border space-y-2">
-              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block">
+            <div className="p-6 bg-white border border-ctm-border space-y-2 shadow-sm">
+              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block font-bold">
                 Pending Bespoke Projects
               </span>
               <div className="text-3xl font-mono font-bold text-ctm-red">
@@ -198,11 +198,11 @@ export function AdminDashboard() {
               </span>
             </div>
 
-            <div className="p-6 bg-ctm-surface border border-ctm-border space-y-2">
-              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block">
+            <div className="p-6 bg-white border border-ctm-border space-y-2 shadow-sm">
+              <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block font-bold">
                 Catalog Models In Stock
               </span>
-              <div className="text-3xl font-mono font-bold text-white">
+              <div className="text-3xl font-mono font-bold text-black">
                 {productsList.length}
               </div>
               <span className="text-[11px] font-mono text-ctm-lightMuted">
@@ -212,14 +212,14 @@ export function AdminDashboard() {
           </div>
 
           {/* Recent Orders Overview */}
-          <div className="bg-ctm-surface border border-ctm-border p-6 sm:p-8 space-y-6">
+          <div className="bg-white border border-ctm-border p-6 sm:p-8 space-y-6 shadow-sm">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-display font-bold uppercase text-white tracking-wider">
+              <h2 className="text-lg font-display font-black uppercase text-black tracking-wider">
                 Recent Orders Feed
               </h2>
               <button
                 onClick={() => setActiveTab("orders")}
-                className="text-xs font-mono text-ctm-red hover:underline uppercase"
+                className="text-xs font-mono text-ctm-red hover:underline uppercase font-bold"
               >
                 View All Manifests →
               </button>
@@ -228,7 +228,7 @@ export function AdminDashboard() {
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs font-mono">
                 <thead>
-                  <tr className="border-b border-ctm-border text-ctm-muted uppercase text-[10px]">
+                  <tr className="border-b border-ctm-border text-ctm-muted uppercase text-[10px] font-bold">
                     <th className="py-3 px-4">Order Ref</th>
                     <th className="py-3 px-4">Client</th>
                     <th className="py-3 px-4">Allocated Hardware</th>
@@ -236,25 +236,25 @@ export function AdminDashboard() {
                     <th className="py-3 px-4">Status</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-ctm-borderSubtle">
+                <tbody className="divide-y divide-ctm-border">
                   {recentOrders.map((ord) => (
-                    <tr key={ord.orderNumber} className="hover:bg-ctm-surfaceHover">
-                      <td className="py-3.5 px-4 text-white font-bold">
+                    <tr key={ord.orderNumber} className="hover:bg-ctm-surfaceSubtle">
+                      <td className="py-3.5 px-4 text-black font-bold">
                         {ord.orderNumber}
                       </td>
                       <td className="py-3.5 px-4 text-ctm-lightMuted">
                         {ord.customer}
                       </td>
-                      <td className="py-3.5 px-4 text-white">{ord.items}</td>
-                      <td className="py-3.5 px-4 text-white font-bold">
+                      <td className="py-3.5 px-4 text-black">{ord.items}</td>
+                      <td className="py-3.5 px-4 text-black font-bold">
                         {formatPrice(ord.total)}
                       </td>
                       <td className="py-3.5 px-4">
                         <span
-                          className={`px-2 py-0.5 text-[10px] font-mono uppercase ${
+                          className={`px-2 py-0.5 text-[10px] font-mono uppercase font-bold ${
                             ord.status === "DELIVERED"
-                              ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
-                              : "bg-ctm-red/10 text-ctm-red border border-ctm-red/20"
+                              ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                              : "bg-red-50 text-ctm-red border border-red-200"
                           }`}
                         >
                           {ord.status}
@@ -273,22 +273,22 @@ export function AdminDashboard() {
       {activeTab === "products" && (
         <div className="space-y-6 animate-fade-in">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-mono text-ctm-muted uppercase tracking-widest">
+            <span className="text-xs font-mono text-ctm-muted uppercase tracking-widest font-bold">
               ACTIVE HARDWARE UNITS ({productsList.length})
             </span>
             <button
               onClick={() => setNewProductModal(true)}
-              className="px-4 py-2 bg-ctm-red hover:bg-ctm-redHover text-white text-xs font-display font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors"
+              className="px-4 py-2 bg-black hover:bg-ctm-red text-white text-xs font-display font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors shadow-sm"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>ADD NEW HARDWARE</span>
             </button>
           </div>
 
-          <div className="bg-ctm-surface border border-ctm-border overflow-hidden">
+          <div className="bg-white border border-ctm-border overflow-hidden shadow-sm">
             <table className="w-full text-left text-xs font-mono">
               <thead>
-                <tr className="border-b border-ctm-border text-ctm-muted uppercase text-[10px]">
+                <tr className="border-b border-ctm-border text-ctm-muted uppercase text-[10px] font-bold">
                   <th className="py-3 px-4">Hardware Unit</th>
                   <th className="py-3 px-4">SKU</th>
                   <th className="py-3 px-4">Base Price</th>
@@ -297,11 +297,11 @@ export function AdminDashboard() {
                   <th className="py-3 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-ctm-borderSubtle">
+              <tbody className="divide-y divide-ctm-border">
                 {productsList.map((prod) => (
-                  <tr key={prod.id} className="hover:bg-ctm-surfaceHover">
+                  <tr key={prod.id} className="hover:bg-ctm-surfaceSubtle">
                     <td className="py-4 px-4 flex items-center gap-3">
-                      <div className="relative w-10 h-10 bg-black border border-ctm-border p-1 shrink-0">
+                      <div className="relative w-10 h-10 bg-ctm-surfaceSubtle border border-ctm-border p-1 shrink-0">
                         <Image
                           src={prod.images[0]?.url || "/images/products/heat-2-main.svg"}
                           alt={prod.name}
@@ -310,7 +310,7 @@ export function AdminDashboard() {
                         />
                       </div>
                       <div>
-                        <span className="font-display font-bold text-white text-sm uppercase block">
+                        <span className="font-display font-bold text-black text-sm uppercase block">
                           {prod.name}
                         </span>
                         <span className="text-[10px] text-ctm-muted">
@@ -319,14 +319,14 @@ export function AdminDashboard() {
                       </div>
                     </td>
                     <td className="py-4 px-4 text-ctm-lightMuted">{prod.sku}</td>
-                    <td className="py-4 px-4 text-white font-bold">
+                    <td className="py-4 px-4 text-black font-bold">
                       {formatPrice(prod.price)}
                     </td>
                     <td className="py-4 px-4 text-ctm-lightMuted">
                       {prod.capacity}
                     </td>
                     <td className="py-4 px-4">
-                      <span className="text-emerald-400 font-semibold">
+                      <span className="text-emerald-600 font-bold">
                         {prod.inventory} units available
                       </span>
                     </td>
@@ -334,14 +334,14 @@ export function AdminDashboard() {
                       <a
                         href={`/products/${prod.slug}`}
                         target="_blank"
-                        className="p-1.5 border border-ctm-border text-ctm-muted hover:text-white inline-block"
+                        className="p-1.5 border border-ctm-border text-black hover:border-black inline-block"
                         title="View on site"
                       >
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                       <button
                         onClick={() => handleDeleteProduct(prod.id)}
-                        className="p-1.5 border border-ctm-border text-ctm-muted hover:text-ctm-red inline-block"
+                        className="p-1.5 border border-ctm-border text-black hover:text-ctm-red hover:border-ctm-red inline-block"
                         title="Delete product"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
@@ -359,7 +359,7 @@ export function AdminDashboard() {
       {activeTab === "inquiries" && (
         <div className="space-y-6 animate-fade-in">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-mono text-ctm-muted uppercase tracking-widest">
+            <span className="text-xs font-mono text-ctm-muted uppercase tracking-widest font-bold">
               ARCHITECTURAL ENQUIRIES ({inquiries.length})
             </span>
           </div>
@@ -368,15 +368,15 @@ export function AdminDashboard() {
             {inquiries.map((inq) => (
               <div
                 key={inq.id}
-                className="p-6 sm:p-8 bg-ctm-surface border border-ctm-border space-y-4"
+                className="p-6 sm:p-8 bg-white border border-ctm-border space-y-4 shadow-sm"
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-ctm-borderSubtle">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-ctm-border">
                   <div>
                     <div className="flex items-center gap-3">
-                      <span className="font-display font-bold text-lg text-white uppercase">
+                      <span className="font-display font-black text-lg text-black uppercase">
                         {inq.name}
                       </span>
-                      <span className="text-xs font-mono text-ctm-red px-2 py-0.5 border border-ctm-red/30">
+                      <span className="text-xs font-mono text-ctm-red font-bold px-2 py-0.5 border border-ctm-red/30">
                         {inq.id}
                       </span>
                     </div>
@@ -397,7 +397,7 @@ export function AdminDashboard() {
                       })}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3.5 py-1.5 bg-ctm-surfaceHover border border-ctm-red text-white text-xs font-mono uppercase tracking-wider flex items-center gap-1.5 hover:bg-ctm-red transition-colors"
+                      className="px-3.5 py-1.5 bg-white border border-ctm-red text-black text-xs font-mono uppercase tracking-wider flex items-center gap-1.5 hover:bg-ctm-red hover:text-white transition-colors font-bold shadow-sm"
                     >
                       <MessageCircle className="w-3.5 h-3.5 text-ctm-red" />
                       <span>WhatsApp Client</span>
@@ -405,40 +405,40 @@ export function AdminDashboard() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono p-4 bg-black border border-ctm-borderSubtle">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono p-4 bg-ctm-surfaceSubtle border border-ctm-border">
                   <div>
-                    <span className="text-ctm-muted block text-[10px] uppercase">
+                    <span className="text-ctm-muted block text-[10px] uppercase font-bold">
                       Sneaker Capacity
                     </span>
-                    <span className="text-white font-semibold">
+                    <span className="text-black font-bold">
                       {inq.sneakerCount} Pairs
                     </span>
                   </div>
                   <div>
-                    <span className="text-ctm-muted block text-[10px] uppercase">
+                    <span className="text-ctm-muted block text-[10px] uppercase font-bold">
                       Dimensions
                     </span>
-                    <span className="text-white">{inq.dimensions}</span>
+                    <span className="text-black">{inq.dimensions}</span>
                   </div>
                   <div>
-                    <span className="text-ctm-muted block text-[10px] uppercase">
+                    <span className="text-ctm-muted block text-[10px] uppercase font-bold">
                       Preferred Style
                     </span>
-                    <span className="text-white">{inq.style}</span>
+                    <span className="text-black">{inq.style}</span>
                   </div>
                   <div>
-                    <span className="text-ctm-muted block text-[10px] uppercase">
+                    <span className="text-ctm-muted block text-[10px] uppercase font-bold">
                       Current Status
                     </span>
-                    <span className="text-emerald-400 font-bold">{inq.status}</span>
+                    <span className="text-emerald-600 font-bold">{inq.status}</span>
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block mb-1">
+                  <span className="text-[10px] font-mono text-ctm-muted uppercase tracking-widest block mb-1 font-bold">
                     Client Spatial Requirements:
                   </span>
-                  <p className="text-xs text-ctm-lightMuted font-mono leading-relaxed bg-black/40 p-3 border border-ctm-borderSubtle">
+                  <p className="text-xs text-ctm-lightMuted font-mono leading-relaxed bg-ctm-surfaceSubtle p-3 border border-ctm-border">
                     {inq.requirements}
                   </p>
                 </div>
@@ -452,20 +452,20 @@ export function AdminDashboard() {
       {activeTab === "orders" && (
         <div className="space-y-6 animate-fade-in">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-mono text-ctm-muted uppercase tracking-widest">
+            <span className="text-xs font-mono text-ctm-muted uppercase tracking-widest font-bold">
               DISPATCH MANIFESTS ({recentOrders.length})
             </span>
           </div>
 
-          <div className="bg-ctm-surface border border-ctm-border p-6 space-y-4">
+          <div className="bg-white border border-ctm-border p-6 space-y-4 shadow-sm">
             {recentOrders.map((ord) => (
               <div
                 key={ord.orderNumber}
-                className="p-4 bg-black border border-ctm-border flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono"
+                className="p-4 bg-ctm-surfaceSubtle border border-ctm-border flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono"
               >
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-white font-bold">{ord.orderNumber}</span>
+                    <span className="text-black font-bold">{ord.orderNumber}</span>
                     <span className="text-ctm-muted">({ord.date})</span>
                   </div>
                   <p className="text-ctm-lightMuted mt-1">Recipient: {ord.customer}</p>
@@ -473,10 +473,10 @@ export function AdminDashboard() {
                 </div>
 
                 <div className="flex sm:flex-col items-end justify-between sm:justify-center">
-                  <span className="font-mono text-sm font-bold text-white">
+                  <span className="font-mono text-sm font-bold text-black">
                     {formatPrice(ord.total)}
                   </span>
-                  <span className="text-[10px] text-emerald-400 uppercase mt-1">
+                  <span className="text-[10px] text-emerald-600 font-bold uppercase mt-1">
                     {ord.status}
                   </span>
                 </div>
@@ -489,8 +489,8 @@ export function AdminDashboard() {
       {/* Add Product Modal (Simple Simulation) */}
       {newProductModal && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
-          <div className="bg-ctm-surface border border-ctm-border max-w-lg w-full p-6 space-y-4">
-            <h3 className="font-display font-bold uppercase text-white text-lg">
+          <div className="bg-white border border-ctm-border max-w-lg w-full p-6 space-y-4 shadow-2xl">
+            <h3 className="font-display font-black uppercase text-black text-lg">
               Commission New Hardware Unit
             </h3>
             <p className="text-xs font-mono text-ctm-muted">
@@ -500,29 +500,29 @@ export function AdminDashboard() {
               <input
                 type="text"
                 placeholder="Product Name (e.g. HEAT 3.0)"
-                className="w-full bg-black border border-ctm-border p-2.5 text-white"
+                className="w-full bg-ctm-surfaceSubtle border border-ctm-border p-2.5 text-black focus:outline-none focus:border-ctm-red focus:bg-white"
               />
               <input
                 type="number"
                 placeholder="Base Price (USD)"
-                className="w-full bg-black border border-ctm-border p-2.5 text-white"
+                className="w-full bg-ctm-surfaceSubtle border border-ctm-border p-2.5 text-black focus:outline-none focus:border-ctm-red focus:bg-white"
               />
               <input
                 type="text"
                 placeholder="SKU"
-                className="w-full bg-black border border-ctm-border p-2.5 text-white"
+                className="w-full bg-ctm-surfaceSubtle border border-ctm-border p-2.5 text-black focus:outline-none focus:border-ctm-red focus:bg-white"
               />
             </div>
-            <div className="flex justify-end gap-3 pt-4 border-t border-ctm-borderSubtle">
+            <div className="flex justify-end gap-3 pt-4 border-t border-ctm-border">
               <button
                 onClick={() => setNewProductModal(false)}
-                className="px-4 py-2 border border-ctm-border text-xs font-mono uppercase text-ctm-muted"
+                className="px-4 py-2 border border-ctm-border text-xs font-mono uppercase text-black hover:border-black font-bold"
               >
                 Cancel
               </button>
               <button
                 onClick={() => setNewProductModal(false)}
-                className="px-4 py-2 bg-ctm-red text-white text-xs font-mono uppercase"
+                className="px-4 py-2 bg-ctm-red hover:bg-ctm-redHover text-white text-xs font-mono uppercase font-bold"
               >
                 Save Hardware
               </button>

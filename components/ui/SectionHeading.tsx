@@ -16,12 +16,15 @@ export function SectionHeading({
   description,
   align = "left",
   className,
+  theme = "light",
 }: SectionHeadingProps) {
   const alignStyles = {
     left: "text-left items-start",
     center: "text-center items-center mx-auto",
     right: "text-right items-end ml-auto",
   };
+
+  const isDark = theme === "dark";
 
   return (
     <div className={cn("flex flex-col mb-12 sm:mb-16", alignStyles[align], className)}>
@@ -33,11 +36,21 @@ export function SectionHeading({
           </span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-white uppercase leading-[1.05]">
+      <h2
+        className={cn(
+          "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight uppercase leading-[1.05]",
+          isDark ? "text-white" : "text-black"
+        )}
+      >
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-sm sm:text-base md:text-lg text-ctm-muted max-w-2xl font-normal leading-relaxed">
+        <p
+          className={cn(
+            "mt-4 text-sm sm:text-base md:text-lg max-w-2xl font-normal leading-relaxed",
+            isDark ? "text-ctm-muted" : "text-ctm-lightMuted"
+          )}
+        >
           {description}
         </p>
       )}

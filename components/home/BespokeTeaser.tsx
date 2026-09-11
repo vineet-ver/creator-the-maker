@@ -40,9 +40,9 @@ export function BespokeTeaser() {
   ];
 
   return (
-    <section className="py-28 sm:py-36 bg-[#080808] border-b border-ctm-border relative overflow-hidden">
+    <section className="py-28 sm:py-36 bg-white border-b border-ctm-border relative overflow-hidden">
       {/* Background Architectural Blueprint */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
+      <div className="absolute inset-0 opacity-10 pointer-events-none invert">
         <Image
           src="/images/gallery/bespoke-hero.svg"
           alt="Bespoke Blueprint"
@@ -53,20 +53,20 @@ export function BespokeTeaser() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 mb-4">
+          <div className="inline-flex items-center gap-2 mb-4 px-3.5 py-1.5 bg-ctm-surfaceSubtle border border-ctm-border">
             <span className="w-1.5 h-1.5 bg-ctm-red" />
-            <span className="text-[11px] font-mono tracking-[0.25em] text-ctm-red uppercase">
+            <span className="text-[11px] font-mono tracking-[0.25em] text-ctm-red uppercase font-semibold">
               ARCHITECTURAL COMMISSIONS
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-black tracking-tight text-white uppercase leading-[0.95]">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-black tracking-tight text-black uppercase leading-[0.95]">
             YOUR COLLECTION.<br />
             YOUR SPACE.<br />
             YOUR RULES<span className="text-ctm-red">.</span>
           </h2>
 
-          <p className="mt-6 text-base sm:text-lg text-ctm-muted font-normal leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg text-ctm-lightMuted font-normal leading-relaxed">
             Every collector space presents unique spatial constraints. Our
             bespoke engineering atelier designs, fabricates, and installs
             completely custom sneaker rooms, motorized vitrines, and monolithic
@@ -81,12 +81,12 @@ export function BespokeTeaser() {
             return (
               <div
                 key={feat.title}
-                className="p-8 bg-ctm-surface/80 border border-ctm-border hover:border-ctm-red/80 transition-all duration-300 backdrop-blur-sm group"
+                className="p-8 bg-ctm-surfaceSubtle border border-ctm-border hover:border-black transition-all duration-300 shadow-sm hover:shadow-md group"
               >
-                <div className="w-10 h-10 border border-ctm-border group-hover:border-ctm-red flex items-center justify-center text-ctm-lightMuted group-hover:text-ctm-red transition-colors mb-6">
+                <div className="w-10 h-10 border border-ctm-border bg-white group-hover:border-ctm-red flex items-center justify-center text-black group-hover:text-ctm-red transition-colors mb-6 shadow-sm">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-display font-bold uppercase tracking-wide text-white mb-2">
+                <h3 className="text-lg font-display font-bold uppercase tracking-wide text-black mb-2">
                   {feat.title}
                 </h3>
                 <p className="text-xs text-ctm-muted leading-relaxed font-normal">
@@ -97,13 +97,13 @@ export function BespokeTeaser() {
           })}
         </div>
 
-        {/* CTA Banner */}
-        <div className="p-8 sm:p-12 bg-black border border-ctm-borderLight flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* CTA Banner: Bold Black Block with Red CTA */}
+        <div className="p-8 sm:p-12 bg-black text-white border border-neutral-900 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div>
             <h3 className="text-2xl font-display font-bold uppercase text-white tracking-wide">
               Initiate Your Commission
             </h3>
-            <p className="text-xs sm:text-sm text-ctm-muted mt-1 font-mono">
+            <p className="text-xs sm:text-sm text-neutral-400 mt-1 font-mono">
               Lead times for bespoke architectural chambers currently range from 4–8 weeks.
             </p>
           </div>
@@ -112,7 +112,7 @@ export function BespokeTeaser() {
             href="/bespoke"
             variant="accent"
             size="lg"
-            className="w-full md:w-auto shrink-0 flex items-center justify-center gap-2"
+            className="w-full md:w-auto shrink-0 flex items-center justify-center gap-2 shadow-lg shadow-ctm-red/25"
           >
             <span>START A BESPOKE PROJECT</span>
             <ArrowRight className="w-4 h-4" />

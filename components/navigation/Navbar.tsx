@@ -54,8 +54,8 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#080808]/90 backdrop-blur-md border-b border-ctm-border py-4"
-            : "bg-gradient-to-b from-black/80 to-transparent py-6 border-b border-transparent"
+            ? "bg-white/95 backdrop-blur-md border-b border-ctm-border py-4 shadow-sm"
+            : "bg-white/80 backdrop-blur-sm py-5 border-b border-ctm-borderSubtle"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,9 +67,9 @@ export function Navbar() {
               aria-label="Creator The Maker Home"
             >
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-base sm:text-lg tracking-[0.18em] text-white uppercase group-hover:text-ctm-red transition-colors flex items-center gap-1.5">
+                <span className="font-display font-extrabold text-base sm:text-lg tracking-[0.18em] text-black uppercase group-hover:text-ctm-red transition-colors flex items-center gap-1.5">
                   CREATOR <span className="text-ctm-muted font-normal text-xs sm:text-sm tracking-widest">THE</span> MAKER
-                  <span className="inline-block w-1.5 h-1.5 bg-ctm-red ml-0.5" />
+                  <span className="inline-block w-2 h-2 bg-ctm-red ml-0.5" />
                 </span>
                 <span className="text-[9px] font-mono tracking-[0.3em] text-ctm-muted uppercase">
                   ARCHITECTURAL SNEAKER STORAGE
@@ -87,8 +87,8 @@ export function Navbar() {
                     href={link.href}
                     className={`relative text-xs font-display uppercase tracking-[0.18em] transition-colors duration-200 py-1 ${
                       isActive
-                        ? "text-white font-bold"
-                        : "text-ctm-lightMuted hover:text-white"
+                        ? "text-black font-bold"
+                        : "text-ctm-lightMuted hover:text-black"
                     }`}
                   >
                     {link.name}
@@ -105,7 +105,7 @@ export function Navbar() {
               {/* Search Button */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="p-2 text-ctm-lightMuted hover:text-white transition-colors"
+                className="p-2 text-black hover:text-ctm-red transition-colors"
                 aria-label="Open search"
               >
                 <Search className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -114,7 +114,7 @@ export function Navbar() {
               {/* Cart Drawer Trigger with Badge */}
               <button
                 onClick={openCart}
-                className="relative p-2 text-ctm-lightMuted hover:text-white transition-colors flex items-center gap-1.5"
+                className="relative p-2 text-black hover:text-ctm-red transition-colors flex items-center gap-1.5"
                 aria-label="Open cart drawer"
               >
                 <ShoppingBag className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -128,7 +128,7 @@ export function Navbar() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 text-ctm-lightMuted hover:text-white transition-colors"
+                className="lg:hidden p-2 text-black hover:text-ctm-red transition-colors"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? (
@@ -144,8 +144,8 @@ export function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-30 pt-24 pb-8 px-6 bg-[#080808]/95 backdrop-blur-xl border-b border-ctm-border flex flex-col justify-between animate-fade-in">
-          <div className="space-y-6 pt-4">
+        <div className="lg:hidden fixed inset-0 z-30 pt-24 pb-8 px-6 bg-white/98 backdrop-blur-2xl border-b border-ctm-border flex flex-col justify-between animate-fade-in">
+          <div className="space-y-5 pt-4">
             <div className="text-[10px] font-mono tracking-widest text-ctm-muted uppercase mb-4">
               ARCHITECTURAL DIRECTORY
             </div>
@@ -153,7 +153,7 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="flex items-center justify-between text-2xl font-display font-bold uppercase tracking-wider text-white hover:text-ctm-red transition-colors py-2 border-b border-ctm-borderSubtle"
+                className="flex items-center justify-between text-2xl font-display font-bold uppercase tracking-wider text-black hover:text-ctm-red transition-colors py-2 border-b border-ctm-borderSubtle"
               >
                 <span>{link.name}</span>
                 <ArrowUpRight className="w-5 h-5 text-ctm-muted" />
@@ -162,7 +162,7 @@ export function Navbar() {
 
             <Link
               href="/contact"
-              className="flex items-center justify-between text-2xl font-display font-bold uppercase tracking-wider text-white hover:text-ctm-red transition-colors py-2 border-b border-ctm-borderSubtle"
+              className="flex items-center justify-between text-2xl font-display font-bold uppercase tracking-wider text-black hover:text-ctm-red transition-colors py-2 border-b border-ctm-borderSubtle"
             >
               <span>Contact Concierge</span>
               <ArrowUpRight className="w-5 h-5 text-ctm-muted" />

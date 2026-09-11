@@ -12,10 +12,10 @@ export function Badge({
   ...props
 }: BadgeProps) {
   const variantStyles = {
-    default: "bg-ctm-surface text-ctm-lightMuted border border-ctm-border",
-    red: "bg-ctm-red/10 text-ctm-red border border-ctm-red/30",
+    default: "bg-ctm-surfaceSubtle text-black border border-ctm-border",
+    red: "bg-ctm-red/10 text-ctm-red border border-ctm-red/30 font-semibold",
     outline: "bg-transparent text-ctm-muted border border-ctm-borderLight",
-    accent: "bg-white text-black font-semibold",
+    accent: "bg-black text-white font-semibold",
   };
 
   return (

@@ -68,49 +68,49 @@ function SuccessContent() {
     <Container size="narrow">
       {/* Success Header */}
       <div className="text-center space-y-4 mb-12">
-        <div className="w-16 h-16 bg-ctm-surface border border-ctm-red flex items-center justify-center mx-auto text-ctm-red shadow-lg shadow-ctm-red/20">
+        <div className="w-16 h-16 bg-white border-2 border-ctm-red flex items-center justify-center mx-auto text-ctm-red shadow-lg shadow-ctm-red/10">
           <CheckCircle2 className="w-8 h-8" />
         </div>
 
         <div className="inline-flex items-center gap-2">
           <span className="w-1.5 h-1.5 bg-ctm-red" />
-          <span className="text-xs font-mono tracking-widest text-ctm-red uppercase">
+          <span className="text-xs font-mono tracking-widest text-ctm-red uppercase font-bold">
             STUDIO RESERVATION CONFIRMED
           </span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl font-display font-black uppercase text-white tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-display font-black uppercase text-black tracking-tight">
           ORDER CONFIRMED<span className="text-ctm-red">.</span>
         </h1>
 
         <p className="text-sm font-mono text-ctm-muted">
-          Order Reference: <span className="text-white font-bold">{orderNumber}</span>
+          Order Reference: <span className="text-black font-bold">{orderNumber}</span>
         </p>
       </div>
 
       {/* Confirmation Details Card */}
-      <div className="bg-ctm-surface border border-ctm-border p-6 sm:p-10 space-y-8">
+      <div className="bg-white border border-ctm-border p-6 sm:p-10 space-y-8 shadow-sm">
         {/* Dispatch Timeline */}
-        <div className="border border-ctm-borderSubtle bg-black p-6 space-y-4">
-          <h3 className="text-xs font-mono tracking-widest text-white uppercase flex items-center gap-2">
+        <div className="border border-ctm-border bg-ctm-surfaceSubtle p-6 space-y-4">
+          <h3 className="text-xs font-mono tracking-widest text-black font-bold uppercase flex items-center gap-2">
             <Package className="w-4 h-4 text-ctm-red" />
             PRODUCTION & LOGISTICS TIMELINE
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs font-mono">
-            <div className="p-3 border border-ctm-border bg-ctm-surface">
+            <div className="p-3 border border-ctm-border bg-white">
               <span className="text-ctm-red font-bold block">STAGE 01: ALLOCATED</span>
-              <span className="text-white mt-1 block">Chassis QA Inspection</span>
+              <span className="text-black font-semibold mt-1 block">Chassis QA Inspection</span>
               <span className="text-ctm-muted text-[10px] mt-0.5 block">Immediate</span>
             </div>
-            <div className="p-3 border border-ctm-border bg-ctm-surface">
-              <span className="text-ctm-lightMuted font-bold block">STAGE 02: CRATING</span>
-              <span className="text-white mt-1 block">Wooden Flight Crate Build</span>
+            <div className="p-3 border border-ctm-border bg-white">
+              <span className="text-black font-bold block">STAGE 02: CRATING</span>
+              <span className="text-black mt-1 block">Wooden Flight Crate Build</span>
               <span className="text-ctm-muted text-[10px] mt-0.5 block">24–48 Hours</span>
             </div>
-            <div className="p-3 border border-ctm-border bg-ctm-surface">
-              <span className="text-ctm-lightMuted font-bold block">STAGE 03: DISPATCH</span>
-              <span className="text-white mt-1 block">White-Glove Courier</span>
+            <div className="p-3 border border-ctm-border bg-white">
+              <span className="text-black font-bold block">STAGE 03: DISPATCH</span>
+              <span className="text-black mt-1 block">White-Glove Courier</span>
               <span className="text-ctm-muted text-[10px] mt-0.5 block">3–5 Business Days</span>
             </div>
           </div>
@@ -118,22 +118,22 @@ function SuccessContent() {
 
         {/* Customer & Address Manifest */}
         {order && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-ctm-borderSubtle text-xs font-mono">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-ctm-border text-xs font-mono">
             <div>
-              <span className="text-[10px] uppercase text-ctm-muted tracking-widest block mb-1">
+              <span className="text-[10px] uppercase text-ctm-muted tracking-widest block mb-1 font-bold">
                 Recipient Information
               </span>
-              <p className="text-white font-semibold">{order.customerName}</p>
+              <p className="text-black font-bold">{order.customerName}</p>
               <p className="text-ctm-lightMuted">{order.email}</p>
               <p className="text-ctm-lightMuted">{order.phone}</p>
             </div>
 
             <div>
-              <span className="text-[10px] uppercase text-ctm-muted tracking-widest block mb-1">
+              <span className="text-[10px] uppercase text-ctm-muted tracking-widest block mb-1 font-bold">
                 Delivery Destination
               </span>
-              <p className="text-ctm-lightMuted">{order.address}</p>
-              <span className="inline-block mt-1 text-[10px] text-emerald-400">
+              <p className="text-black">{order.address}</p>
+              <span className="inline-block mt-1 text-[10px] text-emerald-600 font-bold">
                 White-Glove In-Room Placement
               </span>
             </div>
@@ -142,8 +142,8 @@ function SuccessContent() {
 
         {/* Item Allocation List */}
         {order && order.items && order.items.length > 0 && (
-          <div className="pt-4 border-t border-ctm-borderSubtle space-y-4">
-            <span className="text-xs font-mono uppercase text-ctm-muted tracking-widest block">
+          <div className="pt-4 border-t border-ctm-border space-y-4">
+            <span className="text-xs font-mono uppercase text-ctm-muted tracking-widest block font-bold">
               Allocated Hardware Units:
             </span>
 
@@ -151,10 +151,10 @@ function SuccessContent() {
               {order.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-between p-3 bg-black border border-ctm-border"
+                  className="flex items-center justify-between p-3 bg-ctm-surfaceSubtle border border-ctm-border"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="relative w-12 h-12 bg-ctm-surface shrink-0 p-1">
+                    <div className="relative w-12 h-12 bg-white border border-ctm-border shrink-0 p-1">
                       <Image
                         src={
                           item.product.images[0]?.url ||
@@ -166,7 +166,7 @@ function SuccessContent() {
                       />
                     </div>
                     <div>
-                      <span className="font-display font-bold text-white text-sm uppercase">
+                      <span className="font-display font-bold text-black text-sm uppercase">
                         {item.product.name}
                       </span>
                       <span className="block text-[11px] font-mono text-ctm-muted">
@@ -174,18 +174,18 @@ function SuccessContent() {
                       </span>
                     </div>
                   </div>
-                  <span className="font-mono text-sm font-bold text-white">
+                  <span className="font-mono text-sm font-bold text-black">
                     {formatPrice(item.price * item.quantity)}
                   </span>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-between items-baseline pt-4 border-t border-ctm-borderSubtle">
-              <span className="font-display font-bold text-sm text-white uppercase">
+            <div className="flex justify-between items-baseline pt-4 border-t border-ctm-border">
+              <span className="font-display font-bold text-sm text-black uppercase">
                 Total Settled
               </span>
-              <span className="font-mono text-xl font-bold text-white">
+              <span className="font-mono text-xl font-black text-black">
                 {formatPrice(order.total)}
               </span>
             </div>
@@ -193,7 +193,7 @@ function SuccessContent() {
         )}
 
         {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-ctm-borderSubtle">
+        <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-ctm-border">
           <Button
             href="/shop"
             variant="primary"
@@ -206,7 +206,7 @@ function SuccessContent() {
 
           <button
             onClick={handlePrint}
-            className="px-6 py-4 bg-ctm-surface hover:bg-black border border-ctm-border hover:border-ctm-lightMuted text-white text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 transition-colors"
+            className="px-6 py-4 bg-white hover:bg-black hover:text-white border border-ctm-border text-black text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 transition-colors font-bold shadow-sm"
           >
             <Printer className="w-4 h-4 text-ctm-muted" />
             <span>PRINT RECEIPT</span>
@@ -232,7 +232,7 @@ function SuccessContent() {
 
 export default function CheckoutSuccessPage() {
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
+    <div className="pt-32 pb-24 bg-white min-h-screen">
       <Suspense
         fallback={
           <div className="text-center py-24 text-xs font-mono text-ctm-muted">

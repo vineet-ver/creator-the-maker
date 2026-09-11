@@ -37,16 +37,16 @@ export function CartDrawer() {
     <div className="fixed inset-0 z-[120] overflow-hidden">
       {/* Dimmed backdrop */}
       <div
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
         onClick={closeCart}
       />
 
       <div className="fixed inset-y-0 right-0 flex max-w-full pl-6 sm:pl-10">
-        <div className="w-screen max-w-md bg-ctm-surface border-l border-ctm-border shadow-2xl flex flex-col justify-between animate-fade-in">
+        <div className="w-screen max-w-md bg-white border-l border-ctm-border shadow-2xl flex flex-col justify-between animate-fade-in text-black">
           {/* Header */}
           <div className="p-6 border-b border-ctm-border flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-display font-bold uppercase tracking-wider text-white">
+              <h2 className="text-xl font-display font-bold uppercase tracking-wider text-black">
                 Cart Vault
               </h2>
               <p className="text-xs font-mono text-ctm-muted tracking-widest mt-0.5">
@@ -55,7 +55,7 @@ export function CartDrawer() {
             </div>
             <button
               onClick={closeCart}
-              className="p-2 text-ctm-lightMuted hover:text-white border border-ctm-border hover:border-ctm-lightMuted transition-colors"
+              className="p-2 text-ctm-muted hover:text-black border border-ctm-border hover:border-black transition-colors"
               aria-label="Close cart drawer"
             >
               <X className="w-5 h-5" />
@@ -63,12 +63,12 @@ export function CartDrawer() {
           </div>
 
           {/* White Glove Shipping Progress Banner */}
-          <div className="px-6 py-3.5 bg-black/40 border-b border-ctm-borderSubtle">
+          <div className="px-6 py-3.5 bg-ctm-surfaceSubtle border-b border-ctm-border">
             <div className="flex items-center justify-between text-xs font-mono mb-2">
               <span className="text-ctm-lightMuted">
                 {subtotal >= freeShippingThreshold ? (
-                  <span className="text-ctm-red font-semibold">
-                    ✓ COMPLIMENTARY WHITE-GLOVE DELIVERY UNLOCKED
+                  <span className="text-ctm-red font-bold">
+                    ✓ COMPLIMENTARY WHITE-GLOVE UNLOCKED
                   </span>
                 ) : (
                   <span>
@@ -76,9 +76,9 @@ export function CartDrawer() {
                   </span>
                 )}
               </span>
-              <span className="text-ctm-muted">{Math.round(progressPercent)}%</span>
+              <span className="text-black font-bold font-mono">{Math.round(progressPercent)}%</span>
             </div>
-            <div className="w-full h-1 bg-ctm-border">
+            <div className="w-full h-1.5 bg-ctm-border">
               <div
                 className="h-full bg-ctm-red transition-all duration-500"
                 style={{ width: `${progressPercent}%` }}
@@ -93,7 +93,7 @@ export function CartDrawer() {
                 <div className="w-16 h-16 mx-auto mb-4 border border-dashed border-ctm-border flex items-center justify-center text-ctm-muted">
                   <span className="font-mono text-xs">EMPTY</span>
                 </div>
-                <p className="text-base font-display text-white font-semibold">
+                <p className="text-base font-display text-black font-bold">
                   Your vault is currently empty.
                 </p>
                 <p className="text-xs text-ctm-muted mt-2 max-w-xs mx-auto">
@@ -114,7 +114,7 @@ export function CartDrawer() {
               items.map((item) => (
                 <div key={item.id} className="pt-6 first:pt-0 flex gap-4">
                   {/* Thumbnail */}
-                  <div className="relative w-20 h-24 bg-black border border-ctm-border shrink-0 overflow-hidden flex items-center justify-center">
+                  <div className="relative w-20 h-24 bg-ctm-surfaceSubtle border border-ctm-border shrink-0 overflow-hidden flex items-center justify-center">
                     <Image
                       src={
                         item.product.images[0]?.url ||
@@ -133,7 +133,7 @@ export function CartDrawer() {
                         <Link
                           href={`/products/${item.product.slug}`}
                           onClick={closeCart}
-                          className="font-display font-bold text-white text-sm hover:text-ctm-red transition-colors uppercase tracking-wide"
+                          className="font-display font-bold text-black text-sm hover:text-ctm-red transition-colors uppercase tracking-wide"
                         >
                           {item.product.name}
                         </Link>
@@ -154,24 +154,24 @@ export function CartDrawer() {
 
                     <div className="flex items-center justify-between mt-3 pt-2">
                       {/* Quantity Controls */}
-                      <div className="flex items-center border border-ctm-border">
+                      <div className="flex items-center border border-ctm-border bg-white">
                         <button
                           onClick={() =>
                             updateQuantity(item.id, item.quantity - 1)
                           }
-                          className="w-7 h-7 flex items-center justify-center text-ctm-lightMuted hover:text-white hover:bg-ctm-surfaceHover transition-colors"
+                          className="w-7 h-7 flex items-center justify-center text-black hover:bg-ctm-surfaceSubtle transition-colors"
                           aria-label="Decrease quantity"
                         >
                           <Minus className="w-3 h-3" />
                         </button>
-                        <span className="w-8 text-center text-xs font-mono font-medium text-white">
+                        <span className="w-8 text-center text-xs font-mono font-bold text-black">
                           {item.quantity}
                         </span>
                         <button
                           onClick={() =>
                             updateQuantity(item.id, item.quantity + 1)
                           }
-                          className="w-7 h-7 flex items-center justify-center text-ctm-lightMuted hover:text-white hover:bg-ctm-surfaceHover transition-colors"
+                          className="w-7 h-7 flex items-center justify-center text-black hover:bg-ctm-surfaceSubtle transition-colors"
                           aria-label="Increase quantity"
                         >
                           <Plus className="w-3 h-3" />
@@ -180,7 +180,7 @@ export function CartDrawer() {
 
                       {/* Price */}
                       <div className="text-right">
-                        <span className="font-mono text-sm font-semibold text-white">
+                        <span className="font-mono text-sm font-bold text-black">
                           {formatPrice(item.price * item.quantity)}
                         </span>
                       </div>
@@ -193,17 +193,17 @@ export function CartDrawer() {
 
           {/* Footer / Checkout */}
           {items.length > 0 && (
-            <div className="p-6 bg-black border-t border-ctm-border space-y-4">
+            <div className="p-6 bg-ctm-surfaceSubtle border-t border-ctm-border space-y-4">
               <div className="space-y-1.5 text-xs font-mono">
                 <div className="flex justify-between text-ctm-muted">
                   <span>SUBTOTAL</span>
-                  <span className="text-white font-semibold">
+                  <span className="text-black font-bold">
                     {formatPrice(subtotal)}
                   </span>
                 </div>
                 <div className="flex justify-between text-ctm-muted">
                   <span>LOGISTICS</span>
-                  <span className="text-ctm-lightMuted">
+                  <span className="text-black">
                     {subtotal >= freeShippingThreshold
                       ? "COMPLIMENTARY WHITE GLOVE"
                       : "CALCULATED AT DISPATCH"}
@@ -211,11 +211,11 @@ export function CartDrawer() {
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-ctm-borderSubtle flex justify-between items-baseline">
-                <span className="font-display text-sm font-bold text-white uppercase tracking-wider">
+              <div className="pt-2 border-t border-ctm-border flex justify-between items-baseline">
+                <span className="font-display text-sm font-bold text-black uppercase tracking-wider">
                   Total Allocation
                 </span>
-                <span className="font-mono text-xl font-bold text-white">
+                <span className="font-mono text-xl font-bold text-black">
                   {formatPrice(subtotal)}
                 </span>
               </div>
@@ -224,16 +224,16 @@ export function CartDrawer() {
                 <Button
                   href="/checkout"
                   onClick={closeCart}
-                  variant="primary"
+                  variant="accent"
                   size="lg"
-                  className="w-full flex items-center justify-center gap-2"
+                  className="w-full flex items-center justify-center gap-2 shadow-md shadow-ctm-red/20"
                 >
                   PROCEED TO SECURE CHECKOUT <ArrowRight className="w-4 h-4" />
                 </Button>
 
                 <Button
                   onClick={closeCart}
-                  variant="ghost"
+                  variant="outline"
                   size="sm"
                   className="w-full text-xs font-mono"
                 >

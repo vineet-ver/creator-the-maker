@@ -18,13 +18,13 @@ export function WhatsAppFloatingButton() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-      {/* Mini Dismissible Tooltip for New Visitors */}
+      {/* Mini Dismissible Tooltip */}
       {isTooltipOpen && (
-        <div className="hidden sm:flex items-center gap-3 bg-ctm-surface border border-ctm-border px-4 py-2.5 shadow-2xl text-xs font-mono text-white animate-fade-in">
+        <div className="hidden sm:flex items-center gap-3 bg-white border border-ctm-border px-4 py-2.5 shadow-xl text-xs font-mono text-black animate-fade-in">
           <span>Need architectural guidance? Speak with a specialist.</span>
           <button
             onClick={() => setIsTooltipOpen(false)}
-            className="text-ctm-muted hover:text-white p-0.5"
+            className="text-ctm-muted hover:text-black p-0.5"
             aria-label="Dismiss message"
           >
             <X className="w-3.5 h-3.5" />
@@ -35,7 +35,7 @@ export function WhatsAppFloatingButton() {
       {/* Floating Concierge Action Pill */}
       <button
         onClick={handleClick}
-        className="group flex items-center gap-2.5 bg-ctm-surface/90 hover:bg-black border border-ctm-borderLight hover:border-ctm-red text-white px-4 py-3 shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105"
+        className="group flex items-center gap-2.5 bg-white hover:bg-black hover:text-white border border-ctm-borderLight hover:border-black text-black px-4 py-3 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105"
         aria-label="Contact via WhatsApp Concierge"
       >
         <div className="relative">

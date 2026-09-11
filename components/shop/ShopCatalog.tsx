@@ -62,7 +62,7 @@ export function ShopCatalog() {
   return (
     <div className="w-full">
       {/* Search & Filter Bar */}
-      <div className="bg-ctm-surface border border-ctm-border p-4 sm:p-6 mb-8 flex flex-col md:flex-row gap-4 justify-between items-center">
+      <div className="bg-white border border-ctm-border p-4 sm:p-6 mb-8 flex flex-col md:flex-row gap-4 justify-between items-center shadow-sm">
         {/* Search Input */}
         <div className="relative w-full md:w-80">
           <Search className="w-4 h-4 text-ctm-muted absolute left-3.5 top-1/2 -translate-y-1/2" />
@@ -71,7 +71,7 @@ export function ShopCatalog() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Filter models or SKU..."
-            className="w-full bg-black/60 border border-ctm-border pl-10 pr-4 py-2.5 text-xs font-mono text-white placeholder-ctm-muted focus:outline-none focus:border-ctm-red transition-colors"
+            className="w-full bg-ctm-surfaceSubtle border border-ctm-border pl-10 pr-4 py-2.5 text-xs font-mono text-black placeholder-ctm-muted focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
           />
         </div>
 
@@ -81,7 +81,7 @@ export function ShopCatalog() {
           <select
             value={selectedCollection}
             onChange={(e) => setSelectedCollection(e.target.value)}
-            className="bg-black/60 border border-ctm-border px-3 py-2 text-xs font-mono text-ctm-lightMuted focus:outline-none focus:border-ctm-red uppercase"
+            className="bg-ctm-surfaceSubtle border border-ctm-border px-3 py-2 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
           >
             <option value="all">All Collections</option>
             {COLLECTIONS.filter((c) => c.slug !== "bespoke").map((c) => (
@@ -95,7 +95,7 @@ export function ShopCatalog() {
           <select
             value={selectedCapacity}
             onChange={(e) => setSelectedCapacity(e.target.value)}
-            className="bg-black/60 border border-ctm-border px-3 py-2 text-xs font-mono text-ctm-lightMuted focus:outline-none focus:border-ctm-red uppercase"
+            className="bg-ctm-surfaceSubtle border border-ctm-border px-3 py-2 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
           >
             <option value="all">All Capacities</option>
             <option value="compact">Compact (4-6 Pairs)</option>
@@ -107,7 +107,7 @@ export function ShopCatalog() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="bg-black/60 border border-ctm-border px-3 py-2 text-xs font-mono text-ctm-lightMuted focus:outline-none focus:border-ctm-red uppercase"
+            className="bg-ctm-surfaceSubtle border border-ctm-border px-3 py-2 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
           >
             <option value="featured">Featured Archive</option>
             <option value="price-asc">Price: Low to High</option>
@@ -123,7 +123,7 @@ export function ShopCatalog() {
         {selectedCollection !== "all" && (
           <button
             onClick={() => setSelectedCollection("all")}
-            className="text-ctm-red hover:underline uppercase"
+            className="text-ctm-red hover:underline uppercase font-bold"
           >
             Clear Collection Filter ×
           </button>
@@ -136,7 +136,7 @@ export function ShopCatalog() {
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="group relative bg-ctm-surface border border-ctm-border hover:border-ctm-borderLight flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-black/50"
+              className="group relative bg-white border border-ctm-border hover:border-black/30 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-black/5"
             >
               {/* Top metadata */}
               <div className="p-3 sm:p-4 flex items-center justify-between z-10">
@@ -151,7 +151,7 @@ export function ShopCatalog() {
               {/* Product Visual */}
               <Link
                 href={`/products/${product.slug}`}
-                className="relative w-full h-48 sm:h-64 flex items-center justify-center p-4 overflow-hidden"
+                className="relative w-full h-48 sm:h-64 flex items-center justify-center p-4 overflow-hidden bg-ctm-surfaceSubtle/30"
               >
                 <Image
                   src={product.images[0]?.url || "/images/products/heat-2-main.svg"}
@@ -162,26 +162,26 @@ export function ShopCatalog() {
               </Link>
 
               {/* Details & Quick Action */}
-              <div className="p-4 pt-2 border-t border-ctm-borderSubtle bg-ctm-surface flex-1 flex flex-col justify-between">
+              <div className="p-4 pt-3 border-t border-ctm-border bg-white flex-1 flex flex-col justify-between">
                 <div>
                   <Link
                     href={`/products/${product.slug}`}
-                    className="font-display font-bold text-sm sm:text-base text-white hover:text-ctm-red transition-colors uppercase tracking-wide block truncate"
+                    className="font-display font-bold text-sm sm:text-base text-black hover:text-ctm-red transition-colors uppercase tracking-wide block truncate"
                   >
                     {product.name}
                   </Link>
-                  <p className="text-[11px] text-ctm-muted line-clamp-1 mt-0.5 font-normal">
+                  <p className="text-[11px] text-ctm-lightMuted line-clamp-1 mt-0.5 font-normal">
                     {product.finish}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-ctm-borderSubtle flex items-center justify-between">
-                  <span className="font-mono text-sm sm:text-base font-bold text-white">
+                <div className="mt-4 pt-3 border-t border-ctm-border flex items-center justify-between">
+                  <span className="font-mono text-sm sm:text-base font-bold text-black">
                     {formatPrice(product.price)}
                   </span>
                   <Link
                     href={`/products/${product.slug}`}
-                    className="p-1.5 border border-ctm-border text-ctm-lightMuted hover:text-white hover:border-ctm-red transition-colors"
+                    className="p-1.5 border border-ctm-border text-black hover:text-white hover:bg-ctm-red hover:border-ctm-red transition-all"
                     aria-label={`Inspect ${product.name}`}
                   >
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -195,8 +195,8 @@ export function ShopCatalog() {
           ))}
         </div>
       ) : (
-        <div className="py-24 text-center border border-ctm-border bg-ctm-surface">
-          <p className="text-lg font-display text-white">
+        <div className="py-24 text-center border border-ctm-border bg-white shadow-sm">
+          <p className="text-lg font-display text-black uppercase font-bold">
             No matching models found in this archive filter.
           </p>
           <p className="text-xs font-mono text-ctm-muted mt-2">
@@ -208,7 +208,7 @@ export function ShopCatalog() {
               setSelectedCollection("all");
               setSelectedCapacity("all");
             }}
-            className="mt-6 px-6 py-2.5 bg-white text-black text-xs font-display font-bold uppercase tracking-widest hover:bg-ctm-red hover:text-white transition-colors"
+            className="mt-6 px-6 py-2.5 bg-black text-white text-xs font-display font-bold uppercase tracking-widest hover:bg-ctm-red transition-colors"
           >
             RESET ALL FILTERS
           </button>

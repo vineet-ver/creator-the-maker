@@ -71,7 +71,7 @@ export default async function ProductDetailPage({ params }: Props) {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
+    <div className="pt-32 pb-24 bg-white min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProduct) }}
@@ -79,19 +79,19 @@ export default async function ProductDetailPage({ params }: Props) {
       <Container size="wide">
         {/* Breadcrumb Navigation */}
         <div className="flex items-center gap-2 text-xs font-mono text-ctm-muted mb-8 uppercase tracking-widest">
-          <Link href="/shop" className="hover:text-white transition-colors flex items-center gap-1">
+          <Link href="/shop" className="hover:text-black transition-colors flex items-center gap-1">
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>ARCHIVE</span>
           </Link>
           <span>/</span>
           <Link
             href={`/collections/${product.collectionSlug}`}
-            className="hover:text-white transition-colors"
+            className="hover:text-black transition-colors"
           >
             {product.collectionName}
           </Link>
           <span>/</span>
-          <span className="text-white">{product.name}</span>
+          <span className="text-black font-bold">{product.name}</span>
         </div>
 
         <ProductDetailView product={product} relatedProducts={relatedProducts} />

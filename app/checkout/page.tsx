@@ -87,10 +87,10 @@ export default function CheckoutPage() {
 
   if (mounted && currentItems.length === 0 && !isProcessing) {
     return (
-      <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
+      <div className="pt-32 pb-24 bg-white min-h-screen">
         <Container size="narrow">
-          <div className="py-24 text-center border border-ctm-border bg-ctm-surface p-8">
-            <h1 className="text-2xl font-display font-bold uppercase text-white mb-2">
+          <div className="py-24 text-center border border-ctm-border bg-white p-8 shadow-sm">
+            <h1 className="text-2xl font-display font-black uppercase text-black mb-2">
               Vault is empty
             </h1>
             <p className="text-xs font-mono text-ctm-muted mb-8">
@@ -106,7 +106,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="pt-32 pb-24 bg-ctm-black min-h-screen">
+    <div className="pt-32 pb-24 bg-white min-h-screen">
       <Container size="wide">
         <SectionHeading
           eyebrow="TRANSACTION GATEWAY"
@@ -119,9 +119,9 @@ export default function CheckoutPage() {
             {/* Left Form: Shipping & Payment Details */}
             <div className="lg:col-span-7 space-y-8">
               {/* 1. Contact & Identity */}
-              <div className="bg-ctm-surface border border-ctm-border p-6 sm:p-8 space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-ctm-borderSubtle">
-                  <h2 className="text-sm font-mono uppercase tracking-widest text-white flex items-center gap-2">
+              <div className="bg-white border border-ctm-border p-6 sm:p-8 space-y-4 shadow-sm">
+                <div className="flex items-center justify-between pb-3 border-b border-ctm-border">
+                  <h2 className="text-sm font-mono uppercase tracking-widest text-black font-bold flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-ctm-red" />
                     01 // CLIENT RECIPIENT
                   </h2>
@@ -129,7 +129,7 @@ export default function CheckoutPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       First Name *
                     </label>
                     <input
@@ -139,11 +139,11 @@ export default function CheckoutPage() {
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder="Marcus"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       Last Name *
                     </label>
                     <input
@@ -153,14 +153,14 @@ export default function CheckoutPage() {
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder="Vance"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       Email Address (For Invoicing & Tracking) *
                     </label>
                     <input
@@ -170,11 +170,11 @@ export default function CheckoutPage() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="m.vance@residence.com"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       Phone Number (For White-Glove Dispatch) *
                     </label>
                     <input
@@ -184,23 +184,23 @@ export default function CheckoutPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+1 (555) 019-2834"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                 </div>
               </div>
 
               {/* 2. Destination Manifest */}
-              <div className="bg-ctm-surface border border-ctm-border p-6 sm:p-8 space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-ctm-borderSubtle">
-                  <h2 className="text-sm font-mono uppercase tracking-widest text-white flex items-center gap-2">
+              <div className="bg-white border border-ctm-border p-6 sm:p-8 space-y-4 shadow-sm">
+                <div className="flex items-center justify-between pb-3 border-b border-ctm-border">
+                  <h2 className="text-sm font-mono uppercase tracking-widest text-black font-bold flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-ctm-red" />
                     02 // RESIDENCE & DELIVERY DESTINATION
                   </h2>
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                  <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                     Street Address *
                   </label>
                   <input
@@ -210,13 +210,13 @@ export default function CheckoutPage() {
                     value={formData.address}
                     onChange={handleChange}
                     placeholder="450 Washington Street"
-                    className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                    className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       Penthouse / Suite / Floor (Optional)
                     </label>
                     <input
@@ -225,11 +225,11 @@ export default function CheckoutPage() {
                       value={formData.apartment}
                       onChange={handleChange}
                       placeholder="Penthouse B"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       City *
                     </label>
                     <input
@@ -239,14 +239,14 @@ export default function CheckoutPage() {
                       value={formData.city}
                       onChange={handleChange}
                       placeholder="New York"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       State / Province *
                     </label>
                     <input
@@ -256,11 +256,11 @@ export default function CheckoutPage() {
                       value={formData.state}
                       onChange={handleChange}
                       placeholder="NY"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       Postal Code *
                     </label>
                     <input
@@ -270,18 +270,18 @@ export default function CheckoutPage() {
                       value={formData.postalCode}
                       onChange={handleChange}
                       placeholder="10013"
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                    <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                       Country *
                     </label>
                     <select
                       name="country"
                       value={formData.country}
                       onChange={handleChange}
-                      className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                      className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
                     >
                       <option value="United States">United States</option>
                       <option value="United Kingdom">United Kingdom</option>
@@ -296,13 +296,13 @@ export default function CheckoutPage() {
               </div>
 
               {/* 3. Payment Gateway */}
-              <div className="bg-ctm-surface border border-ctm-border p-6 sm:p-8 space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-ctm-borderSubtle">
-                  <h2 className="text-sm font-mono uppercase tracking-widest text-white flex items-center gap-2">
+              <div className="bg-white border border-ctm-border p-6 sm:p-8 space-y-4 shadow-sm">
+                <div className="flex items-center justify-between pb-3 border-b border-ctm-border">
+                  <h2 className="text-sm font-mono uppercase tracking-widest text-black font-bold flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-ctm-red" />
                     03 // PAYMENT INTEGRATION
                   </h2>
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400">
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-600 font-bold">
                     <Lock className="w-3 h-3" />
                     <span>256-BIT ENCRYPTED</span>
                   </div>
@@ -314,12 +314,12 @@ export default function CheckoutPage() {
                     onClick={() => setPaymentMethod("card")}
                     className={`p-3.5 border flex flex-col items-center justify-center gap-2 text-center transition-all ${
                       paymentMethod === "card"
-                        ? "bg-ctm-surfaceActive border-ctm-red text-white"
-                        : "bg-black border-ctm-border text-ctm-muted hover:border-ctm-lightMuted"
+                        ? "bg-black border-black text-white shadow-md"
+                        : "bg-white border-ctm-border text-black hover:border-black"
                     }`}
                   >
                     <CreditCard className="w-5 h-5 text-ctm-red" />
-                    <span className="text-[11px] font-mono uppercase tracking-wider">
+                    <span className="text-[11px] font-mono uppercase tracking-wider font-bold">
                       Stripe Card
                     </span>
                   </button>
@@ -329,12 +329,12 @@ export default function CheckoutPage() {
                     onClick={() => setPaymentMethod("wire")}
                     className={`p-3.5 border flex flex-col items-center justify-center gap-2 text-center transition-all ${
                       paymentMethod === "wire"
-                        ? "bg-ctm-surfaceActive border-ctm-red text-white"
-                        : "bg-black border-ctm-border text-ctm-muted hover:border-ctm-lightMuted"
+                        ? "bg-black border-black text-white shadow-md"
+                        : "bg-white border-ctm-border text-black hover:border-black"
                     }`}
                   >
                     <Landmark className="w-5 h-5 text-ctm-red" />
-                    <span className="text-[11px] font-mono uppercase tracking-wider">
+                    <span className="text-[11px] font-mono uppercase tracking-wider font-bold">
                       Wire Transfer
                     </span>
                   </button>
@@ -344,21 +344,21 @@ export default function CheckoutPage() {
                     onClick={() => setPaymentMethod("whatsapp")}
                     className={`p-3.5 border flex flex-col items-center justify-center gap-2 text-center transition-all ${
                       paymentMethod === "whatsapp"
-                        ? "bg-ctm-surfaceActive border-ctm-red text-white"
-                        : "bg-black border-ctm-border text-ctm-muted hover:border-ctm-lightMuted"
+                        ? "bg-black border-black text-white shadow-md"
+                        : "bg-white border-ctm-border text-black hover:border-black"
                     }`}
                   >
                     <MessageCircle className="w-5 h-5 text-ctm-red" />
-                    <span className="text-[11px] font-mono uppercase tracking-wider">
+                    <span className="text-[11px] font-mono uppercase tracking-wider font-bold">
                       Concierge Pay
                     </span>
                   </button>
                 </div>
 
                 {paymentMethod === "card" && (
-                  <div className="space-y-4 pt-4 border-t border-ctm-borderSubtle animate-fade-in">
+                  <div className="space-y-4 pt-4 border-t border-ctm-border animate-fade-in">
                     <div>
-                      <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                      <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                         Card Number (Test Mode: Any valid 16 digits) *
                       </label>
                       <input
@@ -368,13 +368,13 @@ export default function CheckoutPage() {
                         value={formData.cardNumber}
                         onChange={handleChange}
                         placeholder="4242 •••• •••• 4242"
-                        className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red tracking-widest"
+                        className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white tracking-widest transition-colors"
                       />
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                        <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                           Expiration Date *
                         </label>
                         <input
@@ -384,11 +384,11 @@ export default function CheckoutPage() {
                           value={formData.expiry}
                           onChange={handleChange}
                           placeholder="MM / YY"
-                          className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                          className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5">
+                        <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
                           Security Code (CVC) *
                         </label>
                         <input
@@ -398,7 +398,7 @@ export default function CheckoutPage() {
                           value={formData.cvc}
                           onChange={handleChange}
                           placeholder="CVC"
-                          className="w-full bg-black border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-ctm-red"
+                          className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                         />
                       </div>
                     </div>
@@ -406,11 +406,11 @@ export default function CheckoutPage() {
                 )}
 
                 {paymentMethod === "wire" && (
-                  <div className="p-4 bg-black border border-ctm-borderSubtle text-xs font-mono text-ctm-muted space-y-2 animate-fade-in">
-                    <p className="text-white font-bold">
+                  <div className="p-4 bg-ctm-surfaceSubtle border border-ctm-border text-xs font-mono text-black space-y-2 animate-fade-in">
+                    <p className="font-bold">
                       Direct SWIFT / ACH Wire Transfer:
                     </p>
-                    <p>
+                    <p className="text-ctm-lightMuted">
                       Upon order placement, you will receive our treasury wire
                       coordinates. Unit production begins immediately upon
                       funds clearance.
@@ -419,11 +419,11 @@ export default function CheckoutPage() {
                 )}
 
                 {paymentMethod === "whatsapp" && (
-                  <div className="p-4 bg-black border border-ctm-borderSubtle text-xs font-mono text-ctm-muted space-y-2 animate-fade-in">
-                    <p className="text-white font-bold">
+                  <div className="p-4 bg-ctm-surfaceSubtle border border-ctm-border text-xs font-mono text-black space-y-2 animate-fade-in">
+                    <p className="font-bold">
                       Dedicated Concierge Assisted Checkout:
                     </p>
-                    <p>
+                    <p className="text-ctm-lightMuted">
                       A studio concierge specialist will contact you on WhatsApp
                       to coordinate personalized payment settlement, split-deposit
                       structures, or corporate purchase orders.
@@ -434,15 +434,15 @@ export default function CheckoutPage() {
             </div>
 
             {/* Right Summary Panel */}
-            <div className="lg:col-span-5 bg-ctm-surface border border-ctm-border p-6 sm:p-8 space-y-6">
-              <h3 className="font-display font-bold text-lg uppercase tracking-wider text-white">
+            <div className="lg:col-span-5 bg-white border border-ctm-border p-6 sm:p-8 space-y-6 shadow-sm">
+              <h3 className="font-display font-black text-lg uppercase tracking-wider text-black">
                 MANIFEST REVIEW ({items.length})
               </h3>
 
-              <div className="space-y-4 divide-y divide-ctm-borderSubtle max-h-80 overflow-y-auto pr-2">
+              <div className="space-y-4 divide-y divide-ctm-border max-h-80 overflow-y-auto pr-2">
                 {items.map((item) => (
                   <div key={item.id} className="pt-4 first:pt-0 flex gap-4">
-                    <div className="relative w-16 h-16 bg-black border border-ctm-border shrink-0 flex items-center justify-center p-1">
+                    <div className="relative w-16 h-16 bg-ctm-surfaceSubtle/30 border border-ctm-border shrink-0 flex items-center justify-center p-1">
                       <Image
                         src={item.product.images[0]?.url || "/images/products/heat-2-main.svg"}
                         alt={item.product.name}
@@ -452,10 +452,10 @@ export default function CheckoutPage() {
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start">
-                        <span className="font-display font-bold text-sm uppercase text-white">
+                        <span className="font-display font-bold text-sm uppercase text-black">
                           {item.product.name}
                         </span>
-                        <span className="font-mono text-xs font-bold text-white">
+                        <span className="font-mono text-xs font-bold text-black">
                           {formatPrice(item.price * item.quantity)}
                         </span>
                       </div>
@@ -467,24 +467,24 @@ export default function CheckoutPage() {
                 ))}
               </div>
 
-              <div className="border-t border-ctm-borderSubtle pt-4 space-y-2 text-xs font-mono">
+              <div className="border-t border-ctm-border pt-4 space-y-2 text-xs font-mono">
                 <div className="flex justify-between text-ctm-muted">
                   <span>SUBTOTAL</span>
-                  <span className="text-white font-semibold">{formatPrice(subtotal)}</span>
+                  <span className="text-black font-bold">{formatPrice(subtotal)}</span>
                 </div>
                 <div className="flex justify-between text-ctm-muted">
                   <span>WHITE-GLOVE LOGISTICS</span>
-                  <span className="text-emerald-400">COMPLIMENTARY</span>
+                  <span className="text-emerald-600 font-bold">COMPLIMENTARY</span>
                 </div>
                 <div className="flex justify-between text-ctm-muted">
                   <span>ESTIMATED TAX</span>
-                  <span className="text-white font-semibold">$0.00</span>
+                  <span className="text-black font-semibold">$0.00</span>
                 </div>
-                <div className="flex justify-between items-baseline pt-3 border-t border-ctm-borderSubtle">
-                  <span className="font-display font-bold text-base uppercase text-white">
+                <div className="flex justify-between items-baseline pt-3 border-t border-ctm-border">
+                  <span className="font-display font-bold text-base uppercase text-black">
                     TOTAL
                   </span>
-                  <span className="font-mono text-2xl font-bold text-white">
+                  <span className="font-mono text-2xl font-black text-black">
                     {formatPrice(subtotal)}
                   </span>
                 </div>
@@ -509,7 +509,7 @@ export default function CheckoutPage() {
 
               <div className="text-[11px] font-mono text-ctm-muted space-y-2 text-center pt-2">
                 <p>By placing order you authorize Creator The Maker fabrication terms.</p>
-                <div className="flex items-center justify-center gap-1.5 text-emerald-400">
+                <div className="flex items-center justify-center gap-1.5 text-emerald-600 font-semibold">
                   <ShieldCheck className="w-3.5 h-3.5" />
                   <span>5-Year Structural Guarantee Active</span>
                 </div>
