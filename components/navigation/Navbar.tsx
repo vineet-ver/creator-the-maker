@@ -57,7 +57,7 @@ export function Navbar() {
           <div className="max-w-7xl mx-auto flex items-center justify-between text-[10px] sm:text-[11px] font-mono tracking-widest uppercase font-semibold">
             <span className="hidden md:inline-flex items-center gap-1.5 opacity-90">
               <span className="w-1.5 h-1.5 bg-white animate-pulse" />
-              PARIS // TOKYO // NEW YORK // DUBAI
+              MUMBAI // NEW DELHI // BENGALURU // HYDERABAD
             </span>
             <span className="mx-auto md:mx-0 tracking-wider text-center">
               COMPLIMENTARY WHITE-GLOVE FREIGHT ON ORDERS OVER $2,500

@@ -10,7 +10,7 @@ export function InstagramCuration() {
   const posts = [
     {
       image: "/images/gallery/gallery-1.svg",
-      caption: "Tribeca Penthouse Vault installation complete. 140 pairs shielded.",
+      caption: "Worli Sea Face Penthouse Vault installation complete. 140 pairs shielded.",
       tag: "@creatorthemaker",
     },
     {
@@ -20,7 +20,7 @@ export function InstagramCuration() {
     },
     {
       image: "/images/gallery/gallery-2.svg",
-      caption: "Brutalist concrete integration in Zurich. Flush wall vitrines.",
+      caption: "Brutalist architectural integration in Golf Links, New Delhi. Flush wall vitrines.",
       tag: "@creatorthemaker",
     },
     {

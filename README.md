@@ -19,7 +19,7 @@ A production-ready, ultra-premium web application engineered for **Creator The M
 2. **Filterable Shop (`/shop`)**: Dynamic search, category/collection filtering, capacity selector, price sorting, and responsive 4-column product grid.
 3. **Product Detail Engine (`/products/[slug]`)**: Multi-angle image gallery with fullscreen lightbox, live variant configurator with dynamic price updates, technical spec sheets, and expandable shipping/warranty accordions.
 4. **Bespoke Custom Storage Studio (`/bespoke`)**: 7-stage architectural wizard with real-time progress, space dimension inputs, finish selection, reference file uploads, and direct WhatsApp project handoff.
-5. **Completed Installations Gallery (`/gallery`)**: Editorial portfolio of collector installations (Tribeca, Zurich, Mayfair, Beverly Hills, Kyoto, Dubai) with fullscreen inspection modals.
+5. **Completed Installations Gallery (`/gallery`)**: Editorial portfolio of collector installations (Worli Sea Face Mumbai, Golf Links New Delhi, Lavelle Road Bengaluru, Jubilee Hills Hyderabad, Assagao Goa, Gurugram) with fullscreen inspection modals.
 6. **Persistent Cart Drawer & Full Cart (`/cart`)**: Slide-over drawer accessible from any page, quantity controls, and White-Glove complimentary delivery meter ($2,500 threshold).
 7. **Two-Step Checkout Gateway (`/checkout`)**: Clean shipping manifest and multi-option payment bridge (Stripe credit card simulation, Wire transfer, and Concierge WhatsApp payment).
 8. **Celebratory Confirmation (`/checkout/success`)**: Confetti micro-interaction, tracking timeline, and printable order invoice.

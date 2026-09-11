@@ -15,9 +15,9 @@ export default function GalleryPage() {
     <div className="pt-32 pb-24 bg-white min-h-screen">
       <Container size="wide">
         <SectionHeading
-          eyebrow="GLOBAL PORTFOLIO"
+          eyebrow="COMMISSION PORTFOLIO"
           title="INSTALLATIONS"
-          description="A curation of residential walk-in vaults, penthouses, and private exhibitions completed across New York, Zurich, London, Beverly Hills, Kyoto, and Dubai."
+          description="A curation of residential walk-in vaults, luxury penthouses, and private exhibitions completed across Mumbai, New Delhi, Bengaluru, Hyderabad, Goa, and Gurugram."
           align="center"
         />
 

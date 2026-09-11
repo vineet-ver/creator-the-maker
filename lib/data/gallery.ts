@@ -3,12 +3,12 @@ import { GalleryItem } from "@/lib/types";
 export const GALLERY_PROJECTS: GalleryItem[] = [
   {
     id: "gal-01",
-    title: "The Tribeca Vault",
-    slug: "the-tribeca-vault",
+    title: "The Worli Sea Face Vault",
+    slug: "the-worli-vault",
     category: "Sneaker Rooms",
-    location: "Tribeca, New York City",
+    location: "Worli Sea Face, Mumbai",
     collectionSize: "140 Pairs",
-    solution: "Full-room architectural installation with climate control and motorized floor-to-ceiling glass vaults.",
+    solution: "Full-room architectural installation with tropical climate buffering and motorized floor-to-ceiling glass vitrines.",
     year: "2026",
     image: "/images/gallery/gallery-1.svg",
     galleryImages: [
@@ -17,7 +17,7 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
       "/images/products/tower-trunk-main.svg",
     ],
     description:
-      "A commissioned walk-in sneaker sanctuary inside a private penthouse loft. Features floor-to-ceiling anodized aluminum vertical towers, museum low-iron glass partitions, and circadian color-temperature lighting synchronized to daylight cycles.",
+      "A commissioned walk-in sneaker sanctuary inside a private triplex overlooking the Arabian Sea. Features floor-to-ceiling anodized aluminum vertical towers, museum low-iron glass partitions, and circadian color-temperature lighting synchronized to coastal daylight cycles.",
     specs: {
       capacity: "140 Pairs",
       finish: "Anodized Matte Obsidian",
@@ -27,12 +27,12 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
   },
   {
     id: "gal-02",
-    title: "Monolith Residence",
-    slug: "monolith-residence",
+    title: "Golf Links Residence",
+    slug: "golf-links-residence",
     category: "Wall Storage",
-    location: "Zurich, Switzerland",
+    location: "Golf Links, New Delhi",
     collectionSize: "48 Pairs",
-    solution: "Continuous flush-wall HEAT 2.0 array integrated into structural concrete architecture.",
+    solution: "Continuous flush-wall HEAT 2.0 array integrated into structural sandstone and reinforced concrete architecture.",
     year: "2025",
     image: "/images/gallery/gallery-2.svg",
     galleryImages: [
@@ -41,7 +41,7 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
       "/images/products/heat-2-side.svg",
     ],
     description:
-      "Integrated into a brutalist concrete villa. Eight HEAT 2.0 dual-column modules recessed flush into the wall surface with magnetic perimeter seals and concealed wire-runs.",
+      "Integrated into a brutalist architectural estate in Central Delhi. Eight HEAT 2.0 dual-column modules recessed flush into the wall surface with magnetic perimeter seals and concealed wire-runs.",
     specs: {
       capacity: "48 Pairs",
       finish: "Raw Brushed Titanium",
@@ -51,10 +51,10 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
   },
   {
     id: "gal-03",
-    title: "Mayfair Private Lounge",
-    slug: "mayfair-private-lounge",
+    title: "Lavelle Road Private Lounge",
+    slug: "lavelle-road-private-lounge",
     category: "Trunks",
-    location: "Mayfair, London",
+    location: "Lavelle Road, Bengaluru",
     collectionSize: "32 Pairs",
     solution: "Dual bespoke heritage Sneaker Trunks flanking custom executive seating credenza.",
     year: "2026",
@@ -65,7 +65,7 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
       "/images/products/long-trunk-main.svg",
     ],
     description:
-      "Two matching bespoke travel trunks rendered in deep textured coal composite with hand-polished brass hardware and Italian alcantara interiors.",
+      "Two matching bespoke travel trunks rendered in deep textured coal composite with hand-polished brass hardware and Italian alcantara interiors for a private tech founder residency.",
     specs: {
       capacity: "32 Pairs",
       finish: "Textured Coal & Solid Brass",
@@ -75,12 +75,12 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
   },
   {
     id: "gal-04",
-    title: "Beverly Hills Horizon Pavilion",
-    slug: "beverly-hills-horizon-pavilion",
+    title: "Jubilee Hills Horizon Pavilion",
+    slug: "jubilee-hills-horizon-pavilion",
     category: "Custom Projects",
-    location: "Beverly Hills, California",
+    location: "Jubilee Hills, Hyderabad",
     collectionSize: "80 Pairs",
-    solution: "Architectural freestanding partition dividing master dressing suite and private gallery.",
+    solution: "Architectural freestanding partition dividing master dressing suite and private collector exhibition pavilion.",
     year: "2025",
     image: "/images/gallery/gallery-4.svg",
     galleryImages: [
@@ -89,22 +89,22 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
       "/images/gallery/bespoke-hero.svg",
     ],
     description:
-      "A dual-sided freestanding architectural divider featuring 20 Tower Trunk modular segments, structural steel framework, and smart automation integrated with Crestron home controls.",
+      "A dual-sided freestanding architectural divider featuring 20 Tower Trunk modular segments, structural aerospace framework, and smart automation integrated with home automation controls.",
     specs: {
       capacity: "80 Pairs",
       finish: "Satin Gunmetal & Smoked Glass",
-      lighting: "Crestron Smart Dimmable 4000K",
+      lighting: "Smart Dimmable 4000K",
       installationTime: "4 Weeks",
     },
   },
   {
     id: "gal-05",
-    title: "Kyoto Minimalist Atelier",
-    slug: "kyoto-minimalist-atelier",
+    title: "Assagao Coastal Atelier",
+    slug: "assagao-coastal-atelier",
     category: "Installations",
-    location: "Kyoto, Japan",
+    location: "Assagao, North Goa",
     collectionSize: "24 Pairs",
-    solution: "Low-profile Long Trunk paired with minimalist floating wall showcases.",
+    solution: "Low-profile Long Trunk paired with minimalist floating wall showcases engineered for coastal monsoon protection.",
     year: "2026",
     image: "/images/gallery/gallery-5.svg",
     galleryImages: [
@@ -113,22 +113,22 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
       "/images/products/heat-main.svg",
     ],
     description:
-      "Harmonizing modern German metalcraft with Japanese spatial minimalism. Features blackened aluminum credenzas and custom cedar-lined humidity buffer cassettes.",
+      "Harmonizing precision architectural metalcraft with tropical coastal minimalism. Features blackened aluminum credenzas, custom dehumidification cassettes, and humidity-buffered display vitrines.",
     specs: {
       capacity: "24 Pairs",
-      finish: "Black Anodized Aluminum & Hinoki Accents",
+      finish: "Black Anodized Aluminum & Teak Accents",
       lighting: "Under-Shelf 2700K Glow",
       installationTime: "10 Days",
     },
   },
   {
     id: "gal-06",
-    title: "Dubai Marina Tower",
-    slug: "dubai-marina-tower",
+    title: "The Magnolias Sky Sanctuary",
+    slug: "the-magnolias-sky-sanctuary",
     category: "Sneaker Rooms",
-    location: "Dubai Marina, UAE",
+    location: "DLF Golf Course Road, Gurugram",
     collectionSize: "200+ Pairs",
-    solution: "Full duplex private gallery spanning 45 square meters with biometric security access.",
+    solution: "Full duplex private gallery spanning 500 sq ft with biometric security access.",
     year: "2026",
     image: "/images/gallery/gallery-6.svg",
     galleryImages: [
@@ -137,7 +137,7 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
       "/images/products/tower-trunk-main.svg",
     ],
     description:
-      "A flagship residential commission housing some of the world's rarest player exclusives and prototypes. Features argon gas-sealed chambers, retinal/fingerprint lock assemblies, and custom anti-reflective museum vitrines.",
+      "A flagship residential commission housing some of India's rarest player exclusives and deadstock grails. Features argon gas-sealed chambers, biometric security assemblies, and custom anti-reflective museum vitrines.",
     specs: {
       capacity: "210 Pairs",
       finish: "Architectural Obsidian & Rose Gold Accents",

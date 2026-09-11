@@ -57,7 +57,7 @@ export function BrandStory() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 p-4 bg-black/90 backdrop-blur-md border border-neutral-800 flex items-center justify-between text-xs font-mono text-neutral-300">
-                <span>STUDIO DISPATCH // STUTTGART & NYC</span>
+                <span>STUDIO DISPATCH // MUMBAI & NEW DELHI</span>
                 <span className="text-ctm-red font-bold">TOLERANCE ±0.02MM</span>
               </div>
             </div>
