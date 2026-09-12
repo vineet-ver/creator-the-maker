@@ -43,9 +43,9 @@ export function Navbar() {
   const navLinks = [
     { name: "Shop", href: "/shop" },
     { name: "Collections", href: "/collections" },
+    { name: "Our Story", href: "/about" },
     { name: "Bespoke", href: "/bespoke" },
     { name: "Gallery", href: "/gallery" },
-    { name: "About", href: "/about" },
     { name: "FAQ", href: "/faq" },
   ];
 
