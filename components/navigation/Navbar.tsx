@@ -60,7 +60,7 @@ export function Navbar() {
               MUMBAI // NEW DELHI // BENGALURU // HYDERABAD
             </span>
             <span className="mx-auto md:mx-0 tracking-wider text-center">
-              COMPLIMENTARY WHITE-GLOVE FREIGHT ON ORDERS OVER $2,500
+              PAN-INDIA DELIVERY INCLUDED — ALL ARTICLES MADE TO ORDER & 100% CUSTOMISABLE
             </span>
             <Link
               href="/bespoke"

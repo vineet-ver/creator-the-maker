@@ -52,7 +52,7 @@ export default async function ProductDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
-    image: product.images.map((img) => img.url),
+    image: product.images.map((img: { url: string }) => img.url),
     description: product.shortDesc,
     sku: product.sku,
     brand: {
@@ -62,7 +62,7 @@ export default async function ProductDetailPage({ params }: Props) {
     offers: {
       "@type": "Offer",
       url: `https://creator-the-maker.com/products/${product.slug}`,
-      priceCurrency: "USD",
+      priceCurrency: "INR",
       price: product.price,
       availability: product.isAvailable
         ? "https://schema.org/InStock"

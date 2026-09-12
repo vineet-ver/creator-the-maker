@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { COLLECTIONS, getCollectionBySlug } from "@/lib/data/collections";
 import { PRODUCTS, getProductsByCollection } from "@/lib/data/products";
+import { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/utils";
 import { Container } from "@/ui/Container";
 import { SectionHeading } from "@/ui/SectionHeading";
@@ -93,7 +94,7 @@ export default async function CollectionDetailPage({ params }: Props) {
 
           {products.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {products.map((product) => (
+              {products.map((product: Product) => (
                 <div
                   key={product.id}
                   className="group bg-white border border-ctm-border hover:border-black/30 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-black/5"

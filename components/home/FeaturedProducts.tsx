@@ -11,15 +11,17 @@ import { Badge } from "@/ui/Badge";
 import { Button } from "@/ui/Button";
 
 export function FeaturedProducts() {
+  const standardProducts = PRODUCTS.filter((p) => p.collectionSlug !== "premium-series");
+
   return (
     <section id="collection" className="py-24 sm:py-32 bg-ctm-surfaceSubtle border-b border-ctm-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <SectionHeading
-            eyebrow="ARCHIVE 2026"
-            title="THE COLLECTION"
-            description="Designed for the pairs worth protecting. Each monolith balances structural architectural weight with zero-oxidation preservation technology."
+            eyebrow="STANDARD ARCHIVE"
+            title="THE MASTER LINEUP"
+            description="All articles are made to order & 100% customisable. Engineered with 18mm Action/Century Pre-Laminated HDHMR, hydraulic shockers, and complimentary Pan-India delivery."
             className="mb-0"
           />
 
@@ -36,7 +38,7 @@ export function FeaturedProducts() {
 
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PRODUCTS.map((product, index) => (
+          {standardProducts.map((product, index) => (
             <div
               key={product.id}
               className={`group relative bg-white border border-ctm-border hover:border-black flex flex-col justify-between transition-all duration-500 shadow-sm hover:shadow-xl ${

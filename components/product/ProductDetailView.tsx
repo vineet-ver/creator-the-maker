@@ -292,14 +292,18 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
           </div>
 
           {/* Value Assurance Badges */}
-          <div className="grid grid-cols-2 gap-3 pt-2 text-[11px] font-mono text-black font-semibold">
-            <div className="flex items-center gap-2 p-3 bg-ctm-surfaceSubtle border border-ctm-border">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2 text-[10px] sm:text-[11px] font-mono text-black font-bold">
+            <div className="flex items-center gap-2 p-2.5 bg-ctm-surfaceSubtle border border-ctm-border">
               <Shield className="w-4 h-4 text-ctm-red shrink-0" />
-              <span>5-YEAR STRUCTURAL WARRANTY</span>
+              <span>TERMITE & WATER RESISTANT</span>
             </div>
-            <div className="flex items-center gap-2 p-3 bg-ctm-surfaceSubtle border border-ctm-border">
+            <div className="flex items-center gap-2 p-2.5 bg-ctm-surfaceSubtle border border-ctm-border">
               <Truck className="w-4 h-4 text-ctm-red shrink-0" />
-              <span>WHITE-GLOVE IN-ROOM PLACEMENT</span>
+              <span>PAN-INDIA FREIGHT INCLUDED</span>
+            </div>
+            <div className="flex items-center gap-2 p-2.5 bg-red-50 border border-red-200 text-ctm-red">
+              <span className="w-2 h-2 rounded-full bg-ctm-red animate-pulse shrink-0" />
+              <span>100% CUSTOMISABLE SPECS</span>
             </div>
           </div>
         </div>

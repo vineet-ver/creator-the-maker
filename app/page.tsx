@@ -1,6 +1,7 @@
 import React from "react";
 import { Hero } from "@/components/home/Hero";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
+import { PremiumSeriesShowcase } from "@/components/home/PremiumSeriesShowcase";
 import { ProductShowcase } from "@/components/home/ProductShowcase";
 import { CollectionGrid } from "@/components/home/CollectionGrid";
 import { BrandStory } from "@/components/home/BrandStory";
@@ -13,6 +14,7 @@ export default function HomePage() {
     <div className="w-full min-h-screen bg-white">
       <Hero />
       <FeaturedProducts />
+      <PremiumSeriesShowcase />
       <ProductShowcase />
       <CollectionGrid />
       <BrandStory />

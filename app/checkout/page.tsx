@@ -34,7 +34,7 @@ export default function CheckoutPage() {
     city: "",
     state: "",
     postalCode: "",
-    country: "United States",
+    country: "India",
     cardNumber: "",
     expiry: "",
     cvc: "",
@@ -183,7 +183,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 019-2834"
+                      placeholder="+91 98200 12345"
                       className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
@@ -201,7 +201,7 @@ export default function CheckoutPage() {
 
                 <div>
                   <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
-                    Street Address *
+                    Street Address / House No. *
                   </label>
                   <input
                     type="text"
@@ -209,7 +209,7 @@ export default function CheckoutPage() {
                     required
                     value={formData.address}
                     onChange={handleChange}
-                    placeholder="450 Washington Street"
+                    placeholder="Plot 42, Linking Road, Bandra West"
                     className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                   />
                 </div>
@@ -217,14 +217,14 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
-                      Penthouse / Suite / Floor (Optional)
+                      Apartment / Tower / Floor (Optional)
                     </label>
                     <input
                       type="text"
                       name="apartment"
                       value={formData.apartment}
                       onChange={handleChange}
-                      placeholder="Penthouse B"
+                      placeholder="Floor 14, Tower A"
                       className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
@@ -238,7 +238,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.city}
                       onChange={handleChange}
-                      placeholder="New York"
+                      placeholder="Mumbai"
                       className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
@@ -247,7 +247,7 @@ export default function CheckoutPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
                     <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
-                      State / Province *
+                      State *
                     </label>
                     <input
                       type="text"
@@ -255,13 +255,13 @@ export default function CheckoutPage() {
                       required
                       value={formData.state}
                       onChange={handleChange}
-                      placeholder="NY"
+                      placeholder="Maharashtra"
                       className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
                   <div>
                     <label className="block text-[10px] font-mono uppercase tracking-widest text-ctm-muted mb-1.5 font-bold">
-                      Postal Code *
+                      PIN / Postal Code *
                     </label>
                     <input
                       type="text"
@@ -269,7 +269,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.postalCode}
                       onChange={handleChange}
-                      placeholder="10013"
+                      placeholder="400050"
                       className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white transition-colors"
                     />
                   </div>
@@ -283,13 +283,11 @@ export default function CheckoutPage() {
                       onChange={handleChange}
                       className="w-full bg-ctm-surfaceSubtle border border-ctm-border px-3.5 py-2.5 text-xs font-mono text-black focus:outline-none focus:border-ctm-red focus:bg-white uppercase cursor-pointer"
                     >
-                      <option value="United States">United States</option>
-                      <option value="United Kingdom">United Kingdom</option>
-                      <option value="Canada">Canada</option>
-                      <option value="Germany">Germany</option>
-                      <option value="Switzerland">Switzerland</option>
+                      <option value="India">India (Pan-India Express)</option>
                       <option value="United Arab Emirates">United Arab Emirates</option>
-                      <option value="Japan">Japan</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="United States">United States</option>
                     </select>
                   </div>
                 </div>
@@ -473,12 +471,12 @@ export default function CheckoutPage() {
                   <span className="text-white font-bold">{formatPrice(subtotal)}</span>
                 </div>
                 <div className="flex justify-between text-neutral-400">
-                  <span>WHITE-GLOVE LOGISTICS</span>
+                  <span>LOGISTICS (PAN-INDIA)</span>
                   <span className="text-ctm-red font-bold">COMPLIMENTARY</span>
                 </div>
                 <div className="flex justify-between text-neutral-400">
-                  <span>ESTIMATED TAX</span>
-                  <span className="text-white font-semibold">$0.00</span>
+                  <span>GST / TAX</span>
+                  <span className="text-white font-semibold">ALL-INCLUSIVE</span>
                 </div>
                 <div className="flex justify-between items-baseline pt-3 border-t border-neutral-800">
                   <span className="font-display font-bold text-base uppercase text-white">

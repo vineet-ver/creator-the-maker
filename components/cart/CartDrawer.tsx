@@ -62,27 +62,17 @@ export function CartDrawer() {
             </button>
           </div>
 
-          {/* White Glove Shipping Progress Banner */}
-          <div className="px-6 py-3.5 bg-ctm-surfaceSubtle border-b border-ctm-border">
-            <div className="flex items-center justify-between text-xs font-mono mb-2">
-              <span className="text-ctm-lightMuted">
-                {subtotal >= freeShippingThreshold ? (
-                  <span className="text-ctm-red font-bold">
-                    ✓ COMPLIMENTARY WHITE-GLOVE UNLOCKED
-                  </span>
-                ) : (
-                  <span>
-                    Add {formatPrice(freeShippingThreshold - subtotal)} for White-Glove
-                  </span>
-                )}
+          {/* Pan-India Shipping Banner */}
+          <div className="px-6 py-3 bg-red-50 border-b border-red-100">
+            <div className="flex items-center justify-between text-xs font-mono">
+              <span className="text-ctm-red font-bold flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-ctm-red animate-pulse" />
+                ✓ COMPLIMENTARY PAN-INDIA DELIVERY INCLUDED
               </span>
-              <span className="text-black font-bold font-mono">{Math.round(progressPercent)}%</span>
+              <span className="text-[11px] font-mono text-neutral-500 uppercase">SAFE CRATED</span>
             </div>
-            <div className="w-full h-1.5 bg-ctm-border">
-              <div
-                className="h-full bg-ctm-red transition-all duration-500"
-                style={{ width: `${progressPercent}%` }}
-              />
+            <div className="w-full h-1 bg-red-200 mt-2">
+              <div className="h-full bg-ctm-red w-full" />
             </div>
           </div>
 
@@ -203,10 +193,8 @@ export function CartDrawer() {
                 </div>
                 <div className="flex justify-between text-ctm-muted">
                   <span>LOGISTICS</span>
-                  <span className="text-black">
-                    {subtotal >= freeShippingThreshold
-                      ? "COMPLIMENTARY WHITE GLOVE"
-                      : "CALCULATED AT DISPATCH"}
+                  <span className="text-ctm-red font-bold font-mono">
+                    COMPLIMENTARY PAN-INDIA
                   </span>
                 </div>
               </div>

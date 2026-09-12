@@ -37,18 +37,20 @@ export function ShopCatalog() {
         if (!matches) return false;
       }
 
-      // Capacity filter
-      if (selectedCapacity !== "all") {
-        if (selectedCapacity === "compact" && !product.capacity.includes("4") && !product.capacity.includes("6")) {
-          return false;
+        // Capacity filter
+        const cap = product.capacity;
+        if (selectedCapacity === "standard") {
+          // 14 to 23 pairs
+          if (!cap.includes("15") && !cap.includes("14") && !cap.includes("21")) return false;
         }
-        if (selectedCapacity === "mid" && !product.capacity.includes("10") && !product.capacity.includes("16")) {
-          return false;
+        if (selectedCapacity === "large") {
+          // 24 to 35 pairs
+          if (!cap.includes("30") && !cap.includes("28") && !cap.includes("24")) return false;
         }
-        if (selectedCapacity === "large" && !product.capacity.includes("24")) {
-          return false;
+        if (selectedCapacity === "mega") {
+          // 36+ pairs
+          if (!cap.includes("34") && !cap.includes("36") && !cap.includes("40") && !cap.includes("50")) return false;
         }
-      }
 
       return true;
     }).sort((a, b) => {
@@ -98,9 +100,9 @@ export function ShopCatalog() {
             className="bg-neutral-900 border border-neutral-700 px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-ctm-red uppercase cursor-pointer"
           >
             <option value="all">All Capacities</option>
-            <option value="compact">Compact (4-6 Pairs)</option>
-            <option value="mid">Mid Scale (10-16 Pairs)</option>
-            <option value="large">High Density (24 Pairs)</option>
+            <option value="standard">Standard (14–23 Pairs)</option>
+            <option value="large">High Capacity (24–35 Pairs)</option>
+            <option value="mega">Archival Scale (36+ Pairs)</option>
           </select>
 
           {/* Sort Selector */}

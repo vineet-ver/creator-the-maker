@@ -77,34 +77,34 @@ export function Hero() {
         <div className="mt-16 sm:mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12 pt-8 border-t border-neutral-800 max-w-4xl w-full text-left">
           <div>
             <span className="block text-[10px] font-mono text-neutral-500 tracking-widest uppercase">
-              Glazing
+              Core Substrate
             </span>
             <span className="font-display font-bold text-white text-sm tracking-wider">
-              99.2% UV Shield Glass
+              18mm Century HDHMR
             </span>
           </div>
           <div>
             <span className="block text-[10px] font-mono text-neutral-500 tracking-widest uppercase">
-              Alloy
+              Fittings
             </span>
             <span className="font-display font-bold text-white text-sm tracking-wider">
-              6063-T6 Aerospace
+              Ozone / Hettich Hardware
             </span>
           </div>
           <div>
             <span className="block text-[10px] font-mono text-neutral-500 tracking-widest uppercase">
-              Illumination
+              Finish Layer
             </span>
             <span className="font-display font-bold text-white text-sm tracking-wider">
-              98 CRI Zero-Heat LED
+              1mm Mika & 120µ Matte
             </span>
           </div>
           <div>
             <span className="block text-[10px] font-mono text-neutral-500 tracking-widest uppercase">
-              Warranty
+              Logistics
             </span>
             <span className="font-display font-bold text-white text-sm tracking-wider">
-              5-Year Structural
+              Pan-India Delivery
             </span>
           </div>
         </div>
