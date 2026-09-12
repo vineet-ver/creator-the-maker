@@ -66,16 +66,17 @@ export function PremiumSeriesShowcase() {
           {premiumProducts.map((product) => (
             <div
               key={product.id}
-              className="premium-animated-border group shadow-2xl transition-all duration-500 hover:-translate-y-1.5"
+              className="premium-box-dark group"
             >
-              <div className="bg-[#0D0D10] h-full flex flex-col justify-between p-6 sm:p-8 relative overflow-hidden border border-neutral-800">
+              <div className="premium-inner-dark flex flex-col justify-between p-6 sm:p-9 relative border border-zinc-900/90 overflow-hidden">
                 {/* Shimmer Light Reflection Overlay */}
                 <div className="shimmer-overlay" />
 
                 {/* Card Top Badges & Meta */}
                 <div className="flex items-center justify-between gap-4 mb-6 z-10">
                   <div className="inline-flex items-center gap-2">
-                    <span className="px-2.5 py-1 bg-ctm-red text-white text-[10px] font-mono font-bold tracking-widest uppercase shadow-sm">
+                    <span className="px-3 py-1 bg-gradient-to-r from-red-600 to-red-700 text-white text-[10px] font-mono font-black tracking-widest uppercase shadow-lg shadow-red-900/40 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
                       PREMIUM TIER
                     </span>
                     <span className="text-[10px] font-mono tracking-widest text-neutral-400 uppercase hidden sm:inline">
@@ -83,34 +84,45 @@ export function PremiumSeriesShowcase() {
                     </span>
                   </div>
 
-                  <span className="px-2.5 py-1 bg-neutral-900 border border-neutral-700 text-[10px] font-mono text-neutral-300 uppercase">
+                  <span className="px-3 py-1 bg-[#09090D] border border-zinc-800 text-[10px] font-mono text-neutral-300 font-semibold tracking-wider uppercase">
                     {product.capacity}
                   </span>
                 </div>
 
-                {/* Image Showcase Stage */}
+                {/* Image Showcase Stage: Pitch Dark Vault with Hover Spotlight */}
                 <Link
                   href={`/products/${product.slug}`}
-                  className="relative w-full h-64 sm:h-80 flex items-center justify-center p-6 bg-neutral-900/50 border border-neutral-800/80 mb-6 overflow-hidden group-hover:border-neutral-700 transition-colors"
+                  className="relative w-full h-64 sm:h-80 flex items-center justify-center p-6 bg-[#040406] border border-zinc-900/90 mb-6 overflow-hidden transition-all duration-500 group-hover:border-neutral-700/60"
                 >
+                  {/* Dramatic Radial Spotlight Behind Sneaker Trunk on Hover */}
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(220,38,38,0.28)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+
+                  {/* Ambient Floor Reflection Shadow */}
+                  <div className="absolute bottom-0 inset-x-8 h-12 bg-gradient-to-t from-black via-black/60 to-transparent pointer-events-none" />
+
                   <Image
                     src={product.images[0]?.url || "/images/products/tower-trunk-main.svg"}
                     alt={product.name}
                     fill
-                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-contain p-4 group-hover:scale-110 group-hover:-translate-y-1.5 transition-all duration-700 ease-out"
                   />
 
                   {/* Hover Inspect Prompt */}
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="px-5 py-2.5 bg-ctm-red text-white text-xs font-display font-bold uppercase tracking-widest flex items-center gap-2 shadow-xl">
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                    <div className="px-5 py-2.5 bg-ctm-red text-white text-xs font-display font-bold uppercase tracking-widest flex items-center gap-2 shadow-2xl shadow-ctm-red/50 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       <Eye className="w-3.5 h-3.5" />
                       <span>INSPECT SPECIFICATIONS</span>
                     </div>
                   </div>
 
                   {/* Dimensions Tag */}
-                  <div className="absolute bottom-3 left-3 px-2.5 py-1 bg-black/90 border border-neutral-800 text-[10px] font-mono text-neutral-300 tracking-wider">
+                  <div className="absolute bottom-3 left-3 px-2.5 py-1 bg-black/90 border border-zinc-800 text-[10px] font-mono text-neutral-300 tracking-wider">
                     {product.dimensions}
+                  </div>
+
+                  {/* Premium Coating Tag */}
+                  <div className="absolute top-3 right-3 px-2 py-0.5 bg-black/80 border border-red-900/50 text-[9px] font-mono text-red-400 font-bold tracking-widest uppercase">
+                    1MM MIKA
                   </div>
                 </Link>
 
@@ -119,13 +131,13 @@ export function PremiumSeriesShowcase() {
                   <div className="flex items-baseline justify-between gap-4">
                     <Link
                       href={`/products/${product.slug}`}
-                      className="text-2xl sm:text-3xl font-display font-black uppercase text-white hover:text-ctm-red transition-colors tracking-wide leading-none"
+                      className="text-2xl sm:text-3xl font-display font-black uppercase text-white group-hover:text-ctm-red transition-colors tracking-wide leading-none"
                     >
                       {product.name}
                     </Link>
 
                     <div className="text-right shrink-0">
-                      <span className="font-mono text-xl sm:text-2xl font-bold text-white">
+                      <span className="font-mono text-xl sm:text-2xl font-bold text-white group-hover:text-red-400 transition-colors">
                         {formatPrice(product.price)}
                       </span>
                       {product.compareAtPrice && (
@@ -140,40 +152,41 @@ export function PremiumSeriesShowcase() {
                     {product.shortDesc}
                   </p>
 
-                  {/* Premium Specs Grid */}
-                  <div className="grid grid-cols-2 gap-2 pt-2 pb-2 text-[11px] font-mono border-y border-neutral-800/80 text-neutral-300">
-                    <div className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-ctm-red shrink-0" />
-                      <span>1mm Mika Surfacing</span>
+                  {/* Premium Specs Grid with Dark Carbon Panels */}
+                  <div className="grid grid-cols-2 gap-2 pt-3 pb-3 text-[11px] font-mono border-y border-zinc-900 text-neutral-300">
+                    <div className="flex items-center gap-2 p-2 bg-[#060609] border border-zinc-900">
+                      <span className="w-1.5 h-1.5 rounded-full bg-ctm-red shrink-0" />
+                      <span className="truncate">1mm Mika Surfacing</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-ctm-red shrink-0" />
-                      <span>120µ HG Matte Lamination</span>
+                    <div className="flex items-center gap-2 p-2 bg-[#060609] border border-zinc-900">
+                      <span className="w-1.5 h-1.5 rounded-full bg-ctm-red shrink-0" />
+                      <span className="truncate">120µ HG Matte</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-ctm-red shrink-0" />
-                      <span>18mm Century HDHMR</span>
+                    <div className="flex items-center gap-2 p-2 bg-[#060609] border border-zinc-900">
+                      <span className="w-1.5 h-1.5 rounded-full bg-ctm-red shrink-0" />
+                      <span className="truncate">18mm Century HDHMR</span>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-ctm-red shrink-0" />
-                      <span>Ozone / Hettich Fittings</span>
+                    <div className="flex items-center gap-2 p-2 bg-[#060609] border border-zinc-900">
+                      <span className="w-1.5 h-1.5 rounded-full bg-ctm-red shrink-0" />
+                      <span className="truncate">Ozone / Hettich</span>
                     </div>
                   </div>
 
                   {/* CTA Actions */}
                   <div className="pt-2 flex items-center justify-between gap-4">
-                    <span className="text-[10px] font-mono text-neutral-400 uppercase">
-                      Pan-India Delivery Included
+                    <span className="text-[10px] font-mono text-neutral-400 uppercase flex items-center gap-1.5">
+                      <span className="w-1 h-1 rounded-full bg-green-500" />
+                      Pan-India Freight Included
                     </span>
 
                     <Button
                       href={`/products/${product.slug}`}
                       variant="primary"
                       size="sm"
-                      className="flex items-center gap-1.5 shadow-md shadow-ctm-red/25"
+                      className="flex items-center gap-1.5 shadow-lg shadow-ctm-red/30 group-hover:scale-105 transition-transform"
                     >
                       <span>ORDER ARTICLE</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
                 </div>

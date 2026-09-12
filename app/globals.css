@@ -104,45 +104,100 @@ body {
   }
 }
 
-/* Animated Luxury Border for Premium Series */
-@keyframes animated-glow {
+/* ==========================================================================
+   PREMIUM SERIES: ULTRA-DARK OBSIDIAN & ROTATING LASER BEAM ANIMATION
+   ========================================================================== */
+
+@keyframes rotating-laser-beam {
   0% {
-    background-position: 0% 50%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dark-aura-breathe {
+  0%, 100% {
+    box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.95), 0 0 25px -5px rgba(220, 38, 38, 0.2);
   }
   50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+    box-shadow: 0 15px 40px -15px rgba(0, 0, 0, 0.95), 0 0 35px -2px rgba(220, 38, 38, 0.32);
   }
 }
 
-.premium-animated-border {
+@keyframes spotlight-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.05);
+  }
+}
+
+/* Master Dark Premium Box Wrapper */
+.premium-box-dark {
   position: relative;
-  background: #09090b;
+  background: #030304;
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 1.5px; /* Razor thin laser border channel */
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: dark-aura-breathe 6s ease-in-out infinite;
 }
 
-.premium-animated-border::before {
+/* Rotating Laser Beam Border */
+.premium-box-dark::before {
   content: '';
   position: absolute;
-  inset: -2px;
-  background: linear-gradient(90deg, #e11d48, #09090b, #e11d48, #ffffff, #e11d48);
-  background-size: 300% 300%;
-  animation: animated-glow 6s ease infinite;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 260deg,
+    rgba(220, 38, 38, 0.15) 290deg,
+    rgba(220, 38, 38, 0.6) 325deg,
+    #ffffff 345deg,
+    #ef4444 355deg,
+    transparent 360deg
+  );
+  animation: rotating-laser-beam 6s linear infinite;
   z-index: 0;
+  opacity: 0.85;
+  transition: opacity 0.4s ease, animation-duration 0.4s ease;
 }
 
-.premium-animated-border > * {
+/* Hover State: Kinetic Acceleration & Crimson Halo Expansion */
+.premium-box-dark:hover {
+  transform: translateY(-8px) scale(1.012);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 1), 0 0 55px 5px rgba(220, 38, 38, 0.5), inset 0 0 25px rgba(220, 38, 38, 0.12);
+}
+
+.premium-box-dark:hover::before {
+  opacity: 1;
+  animation-duration: 2.2s; /* Laser beam accelerates 2.5x faster on hover */
+}
+
+/* Inner Obsidian Stage: Pure Pitch Midnight (#050507) */
+.premium-inner-dark {
   position: relative;
   z-index: 1;
+  background: radial-gradient(circle at 50% 0%, #0c0c10 0%, #030305 75%);
+  height: 100%;
+  width: 100%;
 }
 
+/* Shimmer Light Reflection Sweep */
 @keyframes shimmer-shine {
   0% {
-    transform: translateX(-100%) rotate(25deg);
+    transform: translateX(-120%) rotate(25deg);
   }
   100% {
-    transform: translateX(200%) rotate(25deg);
+    transform: translateX(220%) rotate(25deg);
   }
 }
 
@@ -154,6 +209,7 @@ body {
   height: 100%;
   overflow: hidden;
   pointer-events: none;
+  z-index: 2;
 }
 
 .shimmer-overlay::after {
@@ -166,13 +222,15 @@ body {
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(220, 38, 38, 0.18) 50%,
+    rgba(255, 255, 255, 0.12) 55%,
     rgba(255, 255, 255, 0) 100%
   );
-  transform: translateX(-100%) rotate(25deg);
+  transform: translateX(-120%) rotate(25deg);
 }
 
-.group:hover .shimmer-overlay::after {
-  animation: shimmer-shine 1.4s ease infinite;
+.premium-box-dark:hover .shimmer-overlay::after {
+  animation: shimmer-shine 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
 }
 

@@ -1,4 +1,4 @@
-const DEFAULT_WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "15550192834";
+const DEFAULT_WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+917827574531"; //7827574531
 
 export type WhatsAppIntent =
   | { type: "product"; productName: string; variant?: string }
@@ -13,15 +13,13 @@ export function getWhatsAppUrl(intent: WhatsAppIntent, customPhone?: string): st
 
   switch (intent.type) {
     case "product":
-      message += `I'm interested in ${intent.productName}${
-        intent.variant ? ` (${intent.variant})` : ""
-      }. Could you share details regarding availability and lead times?`;
+      message += `I'm interested in ${intent.productName}${intent.variant ? ` (${intent.variant})` : ""
+        }. Could you share details regarding availability and lead times?`;
       break;
 
     case "bespoke":
-      message += `I'd like to discuss a bespoke sneaker storage project${
-        intent.referenceId ? ` (Ref: ${intent.referenceId})` : ""
-      }${intent.sneakerCount ? ` for approximately ${intent.sneakerCount} pairs` : ""}.`;
+      message += `I'd like to discuss a bespoke sneaker storage project${intent.referenceId ? ` (Ref: ${intent.referenceId})` : ""
+        }${intent.sneakerCount ? ` for approximately ${intent.sneakerCount} pairs` : ""}.`;
       break;
 
     case "order":
