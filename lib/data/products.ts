@@ -28,17 +28,21 @@ export const PRODUCTS: Product[] = [
     collectionName: "Sneaker Trunks",
     images: [
       {
-        url: "/images/products/sneaker-trunk-main.svg",
-        alt: "Standard Sneaker Trunk Elevation View",
+        url: "/images/white-studio/standard-sneacker-trunk-studio.jpg",
+        alt: "Standard Sneaker Trunk Studio Elevation View",
         isPrimary: true,
       },
       {
-        url: "/images/products/sneaker-trunk-open.svg",
-        alt: "Standard Sneaker Trunk Interior with Hydraulic Shockers",
+        url: "/images/white-studio/standard-sneacker-trunk2-studio.jpg",
+        alt: "Standard Sneaker Trunk Studio Interior with Hydraulic Shockers",
       },
       {
-        url: "/images/products/sneaker-trunk-detail.svg",
-        alt: "Standard Sneaker Trunk 6-Wheel Mobility Buffers and Hardware",
+        url: "/images/white-studio/standard-sneacker-trunk3-studio.jpg",
+        alt: "Standard Sneaker Trunk Studio Angle and Hardware Details",
+      },
+      {
+        url: "/images/white-studio/standard-sneacker-trunk4-studio.jpg",
+        alt: "Standard Sneaker Trunk Studio Mobility Buffers and Wheels",
       },
     ],
     specifications: [
@@ -114,17 +118,25 @@ export const PRODUCTS: Product[] = [
     collectionName: "Long Trunks",
     images: [
       {
-        url: "/images/products/long-trunk-main.svg",
-        alt: "Long Trunk Horizontal View",
+        url: "/images/white-studio/long-trunk-studio.jpg",
+        alt: "Long Trunk Studio Horizontal View",
         isPrimary: true,
       },
       {
-        url: "/images/products/long-trunk-open.svg",
-        alt: "Long Trunk Open Elevation Showing 21–23 Pair Capacity",
+        url: "/images/white-studio/long-trunk1-studio.jpg",
+        alt: "Long Trunk Studio Perspective Elevation",
       },
       {
-        url: "/images/products/long-trunk-detail.svg",
-        alt: "Long Trunk Heavy Duty Hydraulic Dampers and Hardware",
+        url: "/images/white-studio/long-trunk2-studio.jpg",
+        alt: "Long Trunk Studio Interior Showing 21–23 Pair Capacity",
+      },
+      {
+        url: "/images/white-studio/long-trunk3-studio.jpg",
+        alt: "Long Trunk Studio Heavy Duty Hydraulic Dampers and Hardware",
+      },
+      {
+        url: "/images/white-studio/long-trunk4-studio.jpg",
+        alt: "Long Trunk Studio Detail Profile and Mobility Base",
       },
     ],
     specifications: [

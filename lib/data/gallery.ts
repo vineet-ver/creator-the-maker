@@ -61,8 +61,8 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
     image: "/images/gallery/gallery-3.svg",
     galleryImages: [
       "/images/gallery/gallery-3.svg",
-      "/images/products/sneaker-trunk-main.svg",
-      "/images/products/long-trunk-main.svg",
+      "/images/white-studio/standard-sneacker-trunk-studio.jpg",
+      "/images/white-studio/long-trunk-studio.jpg",
     ],
     description:
       "Two matching bespoke travel trunks rendered in deep textured coal composite with hand-polished brass hardware and Italian alcantara interiors for a private tech founder residency.",
@@ -109,7 +109,7 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
     image: "/images/gallery/gallery-5.svg",
     galleryImages: [
       "/images/gallery/gallery-5.svg",
-      "/images/products/long-trunk-main.svg",
+      "/images/white-studio/long-trunk-studio.jpg",
       "/images/products/heat-main.svg",
     ],
     description:

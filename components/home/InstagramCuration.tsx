@@ -24,7 +24,7 @@ export function InstagramCuration() {
       tag: "@creatorthemaker",
     },
     {
-      image: "/images/products/sneaker-trunk-main.svg",
+      image: "/images/white-studio/standard-sneacker-trunk-studio.jpg",
       caption: "Hand-finished solid brass corners on our Heritage Steamer Trunk.",
       tag: "#SneakerStorage",
     },

@@ -19,7 +19,7 @@ export const COLLECTIONS: Collection[] = [
     tagline: "Hydraulic shocker mobility trunks for grail rotations.",
     description:
       "Standard and Massive sneaker trunks built with 18mm Pre-Laminated HDHMR, 6-wheel buffers, hydraulic lift shockers, and high-resolution UV digital prints.",
-    coverImage: "/images/products/sneaker-trunk-main.svg",
+    coverImage: "/images/white-studio/standard-sneacker-trunk-studio.jpg",
     itemCount: 2,
     featured: true,
   },
@@ -30,7 +30,7 @@ export const COLLECTIONS: Collection[] = [
     tagline: "Low-profile credenzas & double-decker hidden shelf storage.",
     description:
       "High-capacity horizontal monoliths available in standard format and concealed multi-tier hidden shelf configurations holding up to 35 pairs.",
-    coverImage: "/images/products/long-trunk-main.svg",
+    coverImage: "/images/white-studio/long-trunk-studio.jpg",
     itemCount: 2,
     featured: true,
   },
