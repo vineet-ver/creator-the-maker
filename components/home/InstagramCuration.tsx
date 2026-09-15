@@ -9,23 +9,23 @@ import { SectionHeading } from "@/ui/SectionHeading";
 export function InstagramCuration() {
   const posts = [
     {
-      image: "/images/gallery/gallery-1.svg",
-      caption: "Worli Sea Face Penthouse Vault installation complete. 140 pairs shielded.",
+      image: "/images/gallery/tower-trunk3.JPG",
+      caption: "Tower Trunk multi-tier installation featuring custom footwear graphics.",
       tag: "@creatorthemaker",
     },
     {
-      image: "/images/products/heat-2-main.svg",
-      caption: "HEAT 2.0 dual chamber in Matte Obsidian. Precision milled 6063 alloy.",
+      image: "/images/white-studio/massive-sneaker-trunk-studio.jpg",
+      caption: "Massive Sneaker Trunk: 4-foot monolith with 1 vitrine shelf + 3 slide drawers.",
       tag: "#CreatorTheMaker",
     },
     {
-      image: "/images/gallery/gallery-2.svg",
-      caption: "Brutalist architectural integration in Golf Links, New Delhi. Flush wall vitrines.",
+      image: "/images/white-studio/wardrobes-studio.jpg",
+      caption: "6-foot dedicated Sneaker Cupboard wardrobe holding 38 pairs across 9 shelves.",
       tag: "@creatorthemaker",
     },
     {
       image: "/images/white-studio/standard-sneacker-trunk-studio.jpg",
-      caption: "Hand-finished solid brass corners on our Heritage Steamer Trunk.",
+      caption: "Standard Sneaker Trunk with dual hydraulic shockers & 6-wheel mobility buffers.",
       tag: "#SneakerStorage",
     },
   ];

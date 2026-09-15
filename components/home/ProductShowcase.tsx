@@ -24,7 +24,7 @@ export function ProductShowcase() {
               <div className="relative w-full h-[450px] sm:h-[600px] bg-neutral-900 border border-neutral-800 overflow-hidden flex items-center justify-center p-8 shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-transparent pointer-events-none" />
                 <Image
-                  src={massiveTrunk.images[0]?.url || "/images/products/sneaker-trunk-main.svg"}
+                  src={massiveTrunk.images[0]?.url || "/images/white-studio/massive-sneaker-trunk-studio.jpg"}
                   alt={massiveTrunk.name}
                   fill
                   className="object-contain p-6 group-hover:scale-105 transition-transform duration-700 ease-out"

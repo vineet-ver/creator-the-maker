@@ -13,8 +13,8 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
     image: "/images/gallery/gallery-1.svg",
     galleryImages: [
       "/images/gallery/gallery-1.svg",
-      "/images/products/heat-2-lifestyle.svg",
-      "/images/products/tower-trunk-main.svg",
+      "/images/white-studio/wardrobes-studio.jpg",
+      "/images/white-studio/massive-sneaker-trunk-studio.jpg",
     ],
     description:
       "A commissioned walk-in sneaker sanctuary inside a private triplex overlooking the Arabian Sea. Features floor-to-ceiling anodized aluminum vertical towers, museum low-iron glass partitions, and circadian color-temperature lighting synchronized to coastal daylight cycles.",
@@ -82,11 +82,11 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
     collectionSize: "80 Pairs",
     solution: "Architectural freestanding partition dividing master dressing suite and private collector exhibition pavilion.",
     year: "2025",
-    image: "/images/gallery/gallery-4.svg",
+    image: "/images/gallery/tower-trunk3.JPG",
     galleryImages: [
-      "/images/gallery/gallery-4.svg",
-      "/images/products/tower-trunk-main.svg",
-      "/images/gallery/bespoke-hero.svg",
+      "/images/gallery/tower-trunk3.JPG",
+      "/images/white-studio/tower-trunk-studio.jpg",
+      "/images/white-studio/tower-trunk1-studio.jpg",
     ],
     description:
       "A dual-sided freestanding architectural divider featuring 20 Tower Trunk modular segments, structural aerospace framework, and smart automation integrated with home automation controls.",

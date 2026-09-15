@@ -41,7 +41,7 @@ export const COLLECTIONS: Collection[] = [
     tagline: "Architectural vertical presence and synchronized dual towers.",
     description:
       "Vertical monoliths engineered for collectors maximizing floor-to-ceiling space with Ozone and Hettich precision damping hinges.",
-    coverImage: "/images/products/tower-trunk-main.svg",
+    coverImage: "/images/white-studio/tower-trunk-studio.jpg",
     itemCount: 2,
     featured: true,
   },
@@ -52,7 +52,7 @@ export const COLLECTIONS: Collection[] = [
     tagline: "Full-scale 6ft sneaker cupboards with sliding architectural doors.",
     description:
       "Large-capacity 34–38 pair dedicated footwear storage with 8–9 adjustable shelves, smooth sliding tracks, and termite/water-resistant HDHMR substrates.",
-    coverImage: "/images/products/heat-2-main.svg",
+    coverImage: "/images/white-studio/wardrobes-studio.jpg",
     itemCount: 2,
     featured: true,
   },

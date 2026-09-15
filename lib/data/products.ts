@@ -298,16 +298,20 @@ export const PRODUCTS: Product[] = [
     collectionName: "Sneaker Trunks",
     images: [
       {
-        url: "/images/products/sneaker-trunk-main.svg",
-        alt: "Massive Sneaker Trunk 4ft Elevation",
+        url: "/images/white-studio/massive-sneaker-trunk-studio.jpg",
+        alt: "Massive Sneaker Trunk 4ft Studio Elevation View",
         isPrimary: true,
       },
       {
-        url: "/images/products/sneaker-trunk-open.svg",
-        alt: "Massive Sneaker Trunk 1 Shelf + 3 Drawers Open",
+        url: "/images/white-studio/massive-sneaker-trunk1-studio.jpg",
+        alt: "Massive Sneaker Trunk Studio Perspective View",
       },
       {
-        url: "/images/products/sneaker-trunk-detail.svg",
+        url: "/images/white-studio/massive-sneaker-trunk2-studio.jpg",
+        alt: "Massive Sneaker Trunk Studio 1 Shelf + 3 Drawers Open",
+      },
+      {
+        url: "/images/white-studio/massive-sneaker-trunk3-studio.jpg",
         alt: "Massive Sneaker Trunk Ozone Heavy Duty Ball Bearing Slides",
       },
     ],
@@ -384,17 +388,21 @@ export const PRODUCTS: Product[] = [
     collectionName: "Tower Trunks",
     images: [
       {
-        url: "/images/products/tower-trunk-main.svg",
-        alt: "Tower Trunk 5ft Vertical Elevation View",
+        url: "/images/white-studio/tower-trunk-studio.jpg",
+        alt: "Tower Trunk 5ft Vertical Studio Elevation View",
         isPrimary: true,
       },
       {
-        url: "/images/products/tower-trunk-open.svg",
-        alt: "Tower Trunk Shelving Display Open",
+        url: "/images/white-studio/tower-trunk1-studio.jpg",
+        alt: "Tower Trunk Studio Shelving Display",
       },
       {
-        url: "/images/products/tower-trunk-detail.svg",
-        alt: "Tower Trunk Soft-Close Ozone Hinges",
+        url: "/images/white-studio/tower-trunk2-studio.jpg",
+        alt: "Tower Trunk Studio Soft-Close Ozone Hardware",
+      },
+      {
+        url: "/images/gallery/tower-trunk3.JPG",
+        alt: "Tower Trunk Architectural Installation View",
       },
     ],
     specifications: [
@@ -469,17 +477,21 @@ export const PRODUCTS: Product[] = [
     collectionName: "Wardrobes & Cupboards",
     images: [
       {
-        url: "/images/products/heat-2-main.svg",
-        alt: "Sneaker Cupboard 6ft Vertical Front View",
+        url: "/images/white-studio/wardrobes-studio.jpg",
+        alt: "Sneaker Cupboard 6ft Vertical Studio Front View",
         isPrimary: true,
       },
       {
-        url: "/images/products/heat-2-side.svg",
-        alt: "Sneaker Cupboard 8–9 Internal Shelves Display",
+        url: "/images/white-studio/wardrobes1-studio.jpg",
+        alt: "Sneaker Cupboard Studio Perspective Elevation",
       },
       {
-        url: "/images/products/heat-2-detail.svg",
-        alt: "Sneaker Cupboard Heavy Duty Ozone/Hettich Sliding Tracks",
+        url: "/images/white-studio/wardrobes2-studio.jpg",
+        alt: "Sneaker Cupboard Studio 8–9 Shelves Display",
+      },
+      {
+        url: "/images/white-studio/wardrobes3-studio.jpg",
+        alt: "Sneaker Cupboard Studio Sliding Tracks and Hardware",
       },
     ],
     specifications: [
