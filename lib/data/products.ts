@@ -212,17 +212,21 @@ export const PRODUCTS: Product[] = [
     collectionName: "Long Trunks",
     images: [
       {
-        url: "/images/products/long-trunk-main.svg",
-        alt: "Long Trunk with Hidden Shelf Mechanism",
+        url: "/images/white-studio/long-trunk-w-hidden-shelf-studio.jpg",
+        alt: "Long Trunk with Hidden Shelf Studio Perspective View",
         isPrimary: true,
       },
       {
-        url: "/images/products/long-trunk-open.svg",
-        alt: "Long Trunk Double-Decker Hidden Tier Revealed",
+        url: "/images/white-studio/long-trunk-w-hidden-shelf1-studio.jpg",
+        alt: "Long Trunk with Hidden Shelf Multi-Tier Interior Display",
       },
       {
-        url: "/images/products/long-trunk-detail.svg",
-        alt: "Concealed Drawer Slides and Hydraulic Dampers",
+        url: "/images/white-studio/long-trunk-w-hidden-shelf3-studio.jpg",
+        alt: "Long Trunk with Hidden Shelf Pull-Out Drawer Slides Mechanism",
+      },
+      {
+        url: "/images/white-studio/long-trunk-w-hidden-shelf2-studio.jpg",
+        alt: "Long Trunk with Hidden Shelf Studio Elevation and Monogram Detail",
       },
     ],
     specifications: [

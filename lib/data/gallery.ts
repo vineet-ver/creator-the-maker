@@ -110,7 +110,7 @@ export const GALLERY_PROJECTS: GalleryItem[] = [
     galleryImages: [
       "/images/gallery/gallery-5.svg",
       "/images/white-studio/long-trunk-studio.jpg",
-      "/images/products/heat-main.svg",
+      "/images/white-studio/long-trunk-w-hidden-shelf-studio.jpg",
     ],
     description:
       "Harmonizing precision architectural metalcraft with tropical coastal minimalism. Features blackened aluminum credenzas, custom dehumidification cassettes, and humidity-buffered display vitrines.",

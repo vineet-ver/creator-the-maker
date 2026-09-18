@@ -201,7 +201,7 @@ export function ProductShowcase() {
               <div className="relative w-full h-[450px] sm:h-[600px] bg-white border border-ctm-border overflow-hidden flex items-center justify-center p-8 shadow-sm">
                 <div className="absolute inset-0 bg-gradient-to-tl from-black/5 via-transparent to-transparent pointer-events-none" />
                 <Image
-                  src={hiddenShelfTrunk.images[0]?.url || "/images/products/long-trunk-main.svg"}
+                  src={hiddenShelfTrunk.images[0]?.url || "/images/white-studio/long-trunk-w-hidden-shelf-studio.jpg"}
                   alt={hiddenShelfTrunk.name}
                   fill
                   className="object-contain p-6 group-hover:scale-105 transition-transform duration-700 ease-out"
