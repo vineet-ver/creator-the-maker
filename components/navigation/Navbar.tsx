@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, ShoppingBag, Menu, X, ArrowUpRight } from "lucide-react";
@@ -83,11 +84,21 @@ export function Navbar() {
               {/* LEFT: Brand Logo */}
               <Link
                 href="/"
-                className="flex items-center gap-2 group select-none"
+                className="flex items-center gap-3 sm:gap-3.5 group select-none"
                 aria-label="Creator The Maker Home"
               >
+                <div className="relative w-9 h-9 sm:w-11 sm:h-11 shrink-0 rounded-full overflow-hidden border border-neutral-700/80 group-hover:border-ctm-red transition-all duration-300 shadow-md group-hover:scale-105">
+                  <Image
+                    src="/images/gallery/logo.png"
+                    alt="Creator The Maker Emblem"
+                    fill
+                    sizes="(max-width: 640px) 36px, 44px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
                 <div className="flex flex-col">
-                  <span className="font-display font-extrabold text-base sm:text-lg tracking-[0.18em] text-white uppercase group-hover:text-ctm-red transition-colors flex items-center gap-1.5">
+                  <span className="font-display font-extrabold text-base sm:text-lg tracking-[0.18em] text-white uppercase group-hover:text-ctm-red transition-colors flex items-center gap-1.5 leading-tight">
                     CREATOR <span className="text-neutral-400 font-normal text-xs sm:text-sm tracking-widest">THE</span> MAKER
                     <span className="inline-block w-2 h-2 bg-ctm-red ml-0.5" />
                   </span>

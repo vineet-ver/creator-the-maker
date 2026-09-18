@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
@@ -27,14 +28,25 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-neutral-800">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-block">
-              <span className="font-display font-black text-xl tracking-[0.2em] text-white uppercase flex items-center gap-1">
-                CREATOR <span className="text-neutral-500 font-normal text-sm">THE</span> MAKER
-                <span className="inline-block w-2 h-2 bg-ctm-red ml-1" />
-              </span>
-              <p className="text-[10px] font-mono tracking-[0.3em] text-neutral-400 uppercase mt-1">
-                ARCHITECTURAL SNEAKER STORAGE & BESPOKE COMMISSIONS
-              </p>
+            <Link href="/" className="inline-flex items-center gap-3.5 group select-none">
+              <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-full overflow-hidden border border-neutral-700/80 group-hover:border-ctm-red transition-all duration-300 shadow-md group-hover:scale-105">
+                <Image
+                  src="/images/gallery/logo.png"
+                  alt="Creator The Maker Emblem"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-display font-black text-xl tracking-[0.2em] text-white uppercase flex items-center gap-1 group-hover:text-ctm-red transition-colors leading-tight">
+                  CREATOR <span className="text-neutral-500 font-normal text-sm">THE</span> MAKER
+                  <span className="inline-block w-2 h-2 bg-ctm-red ml-1" />
+                </span>
+                <p className="text-[10px] font-mono tracking-[0.3em] text-neutral-400 uppercase mt-1">
+                  ARCHITECTURAL SNEAKER STORAGE & BESPOKE COMMISSIONS
+                </p>
+              </div>
             </Link>
             <p className="text-sm text-neutral-400 max-w-sm font-normal leading-relaxed">
               Engineered for grails worth protecting. We design and build
