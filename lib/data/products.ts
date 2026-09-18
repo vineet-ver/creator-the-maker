@@ -40,10 +40,6 @@ export const PRODUCTS: Product[] = [
         url: "/images/white-studio/standard-sneacker-trunk3-studio.jpg",
         alt: "Standard Sneaker Trunk Studio Angle and Hardware Details",
       },
-      {
-        url: "/images/white-studio/standard-sneacker-trunk4-studio.jpg",
-        alt: "Standard Sneaker Trunk Studio Mobility Buffers and Wheels",
-      },
     ],
     specifications: [
       { label: "Dimensions", value: "18” Height × 39” Length × 21” Width" },
